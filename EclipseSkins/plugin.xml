@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.ui.preferencePages.Views"
+            class="de.loskutov.eclipseskins.preferences.SkinsPreferencePage"
+            id="SkinsPreferencePage"
+            name="Extended VS Presentation">
+      </page>
+   </extension>
+
+  <extension point="org.eclipse.core.runtime.preferences">
+    <initializer class="de.loskutov.eclipseskins.preferences.PreferenceInitializer"/>
+  </extension>
+   <extension
+         point="org.eclipse.ui.presentationFactories">
+      <factory
+            class="de.loskutov.eclipseskins.presentation.VSImprovedPresentationFactory"
+            id="de.loskutov.EclipseSkins.extvs.EVSPresentationFactory"
+            name="Extended VS Presentation"/>
+      <factory
+            class="org.eclipse.ui.internal.presentations.defaultpresentation.NativePresentationFactory"
+            id="org.eclipse.ui.internal.presentations.defaultpresentation.NativePresentationFactory"
+            name="Native UI (obsoleted and experimental)">
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.themes">
+      <themeElementCategory
+            id="de.loskutov.EclipseSkins.themeElementCategory"
+            label="Extended VS Presentation">
+         <description>
+            The light look and feel with thin borders around active views and icons on both editor and views tabs
+         </description>
+      </themeElementCategory>
+      <categoryPresentationBinding
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            presentationId="de.loskutov.EclipseSkins.extvs.EVSPresentationFactory"/>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.border.color.active"
+            label="Border Color (Focus)"
+            value="COLOR_BLACK">
+         <description>
+            This color is used for the foreground color of the stack border when it has focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.border.color.notactive"
+            label="Border Color (No-Focus)"
+            value="COLOR_DARK_GRAY">
+         <description>
+            This color is used for the foreground color of the stack border when it doesn't have focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.tab.color.active"
+            label="Tab Color (Focus)"
+            value="COLOR_WIDGET_BACKGROUND">
+         <description>
+            This color is used for the background color of the tab when it has focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.tab.text.color.active"
+            label="Tab Text Color (Focus)"
+            value="COLOR_BLACK">
+         <description>
+            This color is used for the foreground (text) color of the tab if the tab is active.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.tab.text.color.notactive"
+            label="Tab Text Color (No-Focus)"
+            value="COLOR_DARK_GRAY">
+         <description>
+            This color is used for the foreground (text) color of the tab if the tab is not active.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.tab.text.color.dirty"
+            label="Tab Text Color (Dirty Editor)"
+            value="COLOR_RED">
+         <description>
+            This color is used for the foreground color of the tab when the assotiated
+            editor buffer is dirty.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.tab.color.notactive"
+            label="Tab Color (No-Focus)"
+            value="247,243,233">
+         <description>
+            This color is used for the background color of the tab when it doesn't have focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.title.color.active"
+            label="Title Color (Focus)"
+            value="248,232,176">
+         <description>
+            This color is used for the background color of the view title when it has focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.title.color.notactive"
+            label="Title Color (No-Focus)"
+            value="247,243,233">
+         <description>
+            This color is used for the background color of the view title when it doesn't have focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.titletext.color.active"
+            label="Title Text Color (Focus)"
+            value="COLOR_BLACK">
+         <description>
+            This color is used for the text color of the view title when it has focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.titletext.color.notactive"
+            label="Title Text Color (No-Focus)"
+            value="COLOR_DARK_GRAY">
+         <description>
+            This color is used for the text color of the view title when it doesn't have focus.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.partlist.btn.color"
+            label="Button Color for Opened Editors List"
+            value="COLOR_GREEN">
+         <description>
+            This color is used for the color of the button for the opened tabs list.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            id="de.loskutov.EclipseSkins.closed.partlist.btn.color"
+            label="Button Color for Closed Editors List"
+            value="COLOR_RED">
+         <description>
+            This color is used for the color of the button for the closed tabs list.
+         </description>
+      </colorDefinition>
+      <fontDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            defaultsTo="org.eclipse.jface.dialogfont"
+            id="de.loskutov.EclipseSkins.font.tabs"
+            label="Tab font">
+         <description>
+            This font is used to display the part selection tabs.
+         </description>
+      </fontDefinition>
+      <fontDefinition
+            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
+            defaultsTo="org.eclipse.jface.dialogfont"
+            id="de.loskutov.EclipseSkins.font.title"
+            label="Title font">
+         <description>
+            This font is used to display the part title.
+         </description>
+      </fontDefinition>
+      <data
+            name="de.loskutov.EclipseSkins.border.size"
+            value="1"/>
+      <data
+            name="de.loskutov.EclipseSkins.tabPaddingX"
+            value="2"/>
+      <data
+            name="de.loskutov.EclipseSkins.tabPaddingY"
+            value="2"/>
+      <data
+            name="de.loskutov.EclipseSkins.showEditorIcon"
+            value="true"/>
+      <data
+            name="de.loskutov.EclipseSkins.showViewIcon"
+            value="true"/>
+      <data
+            name="de.loskutov.EclipseSkins.maxTabsWidth"
+            value="18"/>
+      <data
+            name="de.loskutov.EclipseSkins.moveTabAmount"
+            value="15"/>
+      <data
+            name="de.loskutov.EclipseSkins.useMaxTabsWidth"
+            value="true"/>
+      <data
+            name="de.loskutov.EclipseSkins.showFileExtensions"
+            value="false"/>
+      <data
+            name="de.loskutov.EclipseSkins.cropIndTheMiddle"
+            value="false"/>
+      <data
+            name="de.loskutov.EclipseSkins.viewTabsVisible"
+            value="true"/>
+      <data
+            name="de.loskutov.EclipseSkins.viewToolbarVisible"
+            value="true"/>
+      <theme
+            id="de.loskutov.EclipseSkins.theme.highcontrast"
+            name="High Contrast">
+         <description>
+            The light look and feel with thick borders around active views and
+            icons on both editor and views tabs
+         </description>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.partlist.btn.color"
+               value="COLOR_CYAN"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.closed.partlist.btn.color"
+               value="COLOR_MAGENTA"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.border.color.active"
+               value="COLOR_RED"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.border.color.notactive"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.color.active"
+               value="248,232,176"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.color.notactive"
+               value="247,243,233"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.title.color.active"
+               value="248,232,176"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.title.color.notactive"
+               value="247,243,233"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.text.color.active"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.text.color.notactive"
+               value="COLOR_DARK_GRAY"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.text.color.dirty"
+               value="COLOR_RED"/>
+         <fontOverride
+               id="de.loskutov.EclipseSkins.font.tabs"
+               value="Verdana-regular-9"/>
+         <fontOverride
+               id="de.loskutov.EclipseSkins.font.title"
+               value="Verdana-bold-9"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.titletext.color.active"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.titletext.color.notactive"
+               value="COLOR_BLACK"/>
+         <data
+               name="de.loskutov.EclipseSkins.showEditorIcon"
+               value="true"/>
+         <data
+               name="de.loskutov.EclipseSkins.showViewIcon"
+               value="true"/>
+         <data
+               name="de.loskutov.EclipseSkins.border.size"
+               value="2"/>
+         <data
+               name="de.loskutov.EclipseSkins.tabPaddingX"
+               value="4"/>
+         <data
+               name="de.loskutov.EclipseSkins.tabPaddingY"
+               value="4"/>
+         <data
+              name="de.loskutov.EclipseSkins.maxTabsWidth"
+              value="25"/>
+         <data
+              name="de.loskutov.EclipseSkins.moveTabAmount"
+              value="20"/>
+         <data
+              name="de.loskutov.EclipseSkins.useMaxTabsWidth"
+              value="true"/>
+         <data
+              name="de.loskutov.EclipseSkins.showFileExtensions"
+              value="false"/>
+         <data
+              name="de.loskutov.EclipseSkins.cropIndTheMiddle"
+              value="false"/>
+         <data
+              name="de.loskutov.EclipseSkins.viewTabsVisible"
+              value="true"/>
+         <data
+              name="de.loskutov.EclipseSkins.viewToolbarVisible"
+              value="true"/>
+      </theme>
+    <theme
+            id="de.loskutov.EclipseSkins.theme.mini"
+            name="Minimalistic Theme">
+         <description>
+            The light look and feel with  thin borders around active views and without icons on editor and view tabs
+         </description>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.partlist.btn.color"
+               value="COLOR_WHITE"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.closed.partlist.btn.color"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.border.color.active"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.border.color.notactive"
+               value="COLOR_DARK_GRAY"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.color.active"
+               value="COLOR_WIDGET_BACKGROUND"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.color.notactive"
+               value="247,243,233"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.title.color.active"
+               value="248,232,176"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.text.color.active"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.text.color.notactive"
+               value="COLOR_DARK_GRAY"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.tab.text.color.dirty"
+               value="COLOR_RED"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.title.color.notactive"
+               value="247,243,233"/>
+         <fontOverride
+               id="de.loskutov.EclipseSkins.font.tabs"
+               value="Helvetica-regular-8"/>
+         <fontOverride
+               id="de.loskutov.EclipseSkins.font.title"
+               value="Helvetica-regular-8"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.titletext.color.active"
+               value="COLOR_BLACK"/>
+         <colorOverride
+               id="de.loskutov.EclipseSkins.titletext.color.notactive"
+               value="COLOR_DARK_GRAY"/>
+         <data
+               name="de.loskutov.EclipseSkins.showEditorIcon"
+               value="false"/>
+         <data
+               name="de.loskutov.EclipseSkins.showViewIcon"
+               value="false"/>
+         <data
+               name="de.loskutov.EclipseSkins.border.size"
+               value="1"/>
+         <data
+               name="de.loskutov.EclipseSkins.tabPaddingX"
+               value="1"/>
+         <data
+               name="de.loskutov.EclipseSkins.tabPaddingY"
+               value="1"/>
+         <data
+              name="de.loskutov.EclipseSkins.maxTabsWidth"
+              value="14"/>
+         <data
+              name="de.loskutov.EclipseSkins.moveTabAmount"
+              value="10"/>
+         <data
+              name="de.loskutov.EclipseSkins.useMaxTabsWidth"
+              value="true"/>
+         <data
+              name="de.loskutov.EclipseSkins.showFileExtensions"
+              value="false"/>
+         <data
+              name="de.loskutov.EclipseSkins.cropIndTheMiddle"
+              value="false"/>
+         <data
+              name="de.loskutov.EclipseSkins.viewTabsVisible"
+              value="false"/>
+         <data
+              name="de.loskutov.EclipseSkins.viewToolbarVisible"
+              value="false"/>
+      </theme>
+
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="Editor sessions management"
+            id="EclipseSkins.sessions"
+            label="Editing Sessions"
+            visible="true">
+         <menu
+               id="EclipseSkins.sessionsMenu"
+               label="Editing &amp;Sessions"
+               path="window/additions">
+            <groupMarker name="save"/>
+            <separator name="import"/>
+            <groupMarker name="sessions"/>
+            <separator name="additions"/>
+            <groupMarker name="manage"/>
+         </menu>
+         <action
+               class="de.loskutov.eclipseskins.sessions.ManageSessionsAction"
+               id="EclipseSkins.manageSessions"
+               label="&amp;Manage Sessions..."
+               menubarPath="window/EclipseSkins.sessionsMenu/manage"
+               style="push"/>
+         <action
+               class="de.loskutov.eclipseskins.sessions.LoadSessionsPulldownMenu"
+               icon="icons/restore_all_parts.gif"
+               id="EclipseSkins.sessions"
+               label="&amp;Load Session"
+               menubarPath="window/EclipseSkins.sessionsMenu/sessions"
+               style="pulldown"/>
+         <action
+               class="de.loskutov.eclipseskins.sessions.SaveSessionsPulldownMenu"
+               icon="icons/saveas.gif"
+               id="EclipseSkins.saveSession"
+               label="&amp;Save Opened Editors to Session"
+               menubarPath="window/EclipseSkins.sessionsMenu/save"
+               style="pulldown">
+         </action>
+         <action
+               class="de.loskutov.eclipseskins.sessions.OpenSessionFromClipboardAction"
+               icon="icons/import_sessions.gif"
+               id="EclipseSkins.importSessionFromClipboard"
+               label="&amp;Open Session from Clipboard"
+               menubarPath="window/EclipseSkins.sessionsMenu/import"
+               style="push">
+         </action>
+         <action
+               class="de.loskutov.eclipseskins.sessions.CopySessionToClipboardAction"
+               icon="icons/export_sessions.gif"
+               id="EclipseSkins.exportToClipboardSession"
+               label="&amp;Copy Session to Clipboard"
+               menubarPath="window/EclipseSkins.sessionsMenu/import"
+               style="push">
+         </action>
+      </actionSet>
+   </extension>
+</plugin>

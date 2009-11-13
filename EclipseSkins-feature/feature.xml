@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="EclipseSkins"
+      label="Extended VS Presentation"
+      version="1.5.3.qualifier"
+      provider-name="Andrei Loskutov"
+      plugin="de.loskutov.eclipseskins.extvs"
+      image="loskutov32.gif">
+
+   <description url="http://andrei.gmxhome.de/skins/index.html">
+      Extended VS Presentation plugin contributes powerful editing sessions management and a highly customisable and very useful skin (&quot;look and feel&quot;) for Eclipse
+   </description>
+
+   <copyright url="http://andrei.gmxhome.de/skins/index.html">
+      Copyright (C)2002 - 2006 by Andrei Loskutov &lt;Loskutov@gmx.de&gt;.
+All rights reserved.
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      Eclipse Public License (EPL)
+   </license>
+
+   <url>
+      <update label="Andrei Loskutov plugins site" url="http://andrei.gmxhome.de/eclipse/"/>
+      <discovery label="Andrei Loskutov plugins site" url="http://andrei.gmxhome.de/eclipse/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.net"/>
+      <import plugin="org.eclipse.ui.ide" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.filesystem"/>
+   </requires>
+
+   <plugin
+         id="de.loskutov.eclipseskins.extvs"
+         download-size="400"
+         install-size="400"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

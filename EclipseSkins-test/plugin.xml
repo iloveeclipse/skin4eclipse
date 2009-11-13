@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="perf.MyPerspectiveFactory"
+            id="EclipseSkins-test.perspective1"
+            name="Skins-test"/>
+   </extension>
+
+</plugin>

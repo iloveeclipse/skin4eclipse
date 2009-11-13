@@ -1,0 +1,7 @@
+1.5.2
+ - Patch from Fabio Zadrozny: "Add option in preferences so that ESC key does not close detached views"
+ - Bugfix: if view has no menu, view menu button will not be shown anymore
+ - Patch from Fabio Zadrozny: "Keep the toolbar always visible and don't loose the list of closed editors"
+ - Patch from Fabio Zadrozny: "Editors closed with Ctrl+W or Ctrl+F4 don't appear in the closed editors list"
+ - Patch from Fabio Zadrozny: "Add a way to traverse the tabs (ctrl+page up/ctrl+page down)"
+ - Fix for NPE at TabArea.removeLayoutListener(TabArea.java:191)

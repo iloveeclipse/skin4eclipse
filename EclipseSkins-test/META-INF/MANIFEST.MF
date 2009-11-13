@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EclipseSkins_test Plug-in
+Bundle-SymbolicName: EclipseSkins_test;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.jface,
+ org.eclipse.ui.workbench,
+ org.junit,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.editors
