@@ -30,7 +30,7 @@
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.2.12.jar" id="de.loskutov.BytecodeOutline.feature" version="2.2.12">
       <category name="Eclipse 3.3-3.4"/>
    </feature>
-   <feature url="features/de.loskutov.BytecodeOutline.feature_2.3.jar" id="de.loskutov.BytecodeOutline.feature" version="2.3">
+   <feature url="features/de.loskutov.BytecodeOutline.feature_2.3.0.jar" id="de.loskutov.BytecodeOutline.feature" version="2.3.0">
       <category name="Eclipse 3.5-3.6"/>
    </feature>
    <feature url="features/DataHierarchy_1.0.0.201005301956.jar" id="DataHierarchy" version="1.0.0.201005301956">
@@ -58,8 +58,8 @@
             url="http://datahierarchy.eclipselabs.org.codespot.com/files/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.3.1.201005301956.jar"
             url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.3.1.201005301956.jar"/>
-   <archive path="plugins/de.loskutov.BytecodeOutline_2.3.jar"
-            url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.3.jar"/>
+   <archive path="plugins/de.loskutov.BytecodeOutline_2.3.0.jar"
+            url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.3.0.jar"/>
 
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
       <description>
