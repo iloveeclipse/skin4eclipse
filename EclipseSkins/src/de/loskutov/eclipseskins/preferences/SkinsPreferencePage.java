@@ -9,7 +9,6 @@
  *    Andrei Loskutov - refactoring, themes and full presentation feature set
  *    Fabio Zadrozny - option for esc not to close detached windows
  *******************************************************************************/
-
 package de.loskutov.eclipseskins.preferences;
 
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -43,9 +42,8 @@ import de.loskutov.eclipseskins.ThemeConstants;
 /**
  * @author Andrei
  */
-public class SkinsPreferencePage
-extends PreferencePage
-implements IWorkbenchPreferencePage, SelectionListener {
+public class SkinsPreferencePage extends PreferencePage implements IWorkbenchPreferencePage,
+SelectionListener {
 
     private static final class IntModifyListener implements ModifyListener {
         private final int defaultValue;
@@ -277,22 +275,13 @@ implements IWorkbenchPreferencePage, SelectionListener {
     }
 
     private void createTabMisc() {
-        GridLayout layout;
-        GridData gridData;
         TabItem tabManual = new TabItem(tabFolder, SWT.NONE);
         tabManual.setText("Misc...");
 
         Composite defPanel = createContainer(tabFolder);
         tabManual.setControl(defPanel);
 
-        Group ratingComposite = new Group(defPanel, SWT.SHADOW_ETCHED_IN);
-        layout = new GridLayout();
-        ratingComposite.setLayout(layout);
-        gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
-        ratingComposite.setLayoutData(gridData);
-        ratingComposite.setText("Rate Extended VS Presentation plugin on EPIC");
-
-        RateIt.createTextArea(ratingComposite);
+        SupportPanel.createSupportLinks(defPanel);
     }
 
     /**
