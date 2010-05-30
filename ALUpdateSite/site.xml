@@ -4,47 +4,39 @@
       Andrei Loskutov Eclipse Plugins Update Site
    </description>
    <feature url="features/JDepend4Eclipse_1.2.1.jar" id="JDepend4Eclipse" version="1.2.1">
-      <category name="Eclipse 3.1-3.5"/>
+      <category name="Eclipse 3.3-3.4"/>
+   </feature>
+   <feature url="features/JDepend4Eclipse_1.2.2.qualifier.jar" id="JDepend4Eclipse" version="1.2.2.qualifier">
+      <category name="Eclipse 3.5-3.6"/>
    </feature>
    <feature url="features/FileSync_1.3.5.200910041235.jar" id="FileSync" version="1.3.5.200910041235">
-      <category name="Eclipse 3.3-3.5"/>
+      <category name="Eclipse 3.3-3.4"/>
    </feature>
-   <feature url="features/AnyEditTools_1.6.0.0.jar" id="AnyEditTools" version="1.6.0.0">
-      <category name="Eclipse 3.1"/>
-   </feature>
-   <feature url="features/EclipseSkins_1.3.0.6.jar" id="EclipseSkins" version="1.3.0.6">
-      <category name="Eclipse 3.1"/>
-   </feature>
-   <feature url="features/de.loskutov.BytecodeOutline.feature_2.1.0.jar" id="de.loskutov.BytecodeOutline.feature" version="2.1.0">
-      <category name="Eclipse 3.1"/>
-   </feature>
-   <feature url="features/AnyEditTools_1.8.2.jar" id="AnyEditTools" version="1.8.2">
-      <category name="Eclipse 3.2-3.3"/>
+   <feature url="features/FileSync_1.3.6.qualifier.jar" id="FileSync" version="1.3.6.qualifier">
+      <category name="Eclipse 3.5-3.6"/>
    </feature>
    <feature url="features/AnyEditTools_2.3.0.200910041235.jar" id="AnyEditTools" version="2.3.0.200910041235">
-      <category name="Eclipse 3.3-3.5"/>
+      <category name="Eclipse 3.3-3.4"/>
    </feature>
-   <feature url="features/EclipseSkins_1.4.2.2.jar" id="EclipseSkins" version="1.4.2.2">
-      <category name="Eclipse 3.2-3.3"/>
+   <feature url="features/AnyEditTools_2.3.1.qualifier.jar" id="AnyEditTools" version="2.3.1.qualifier">
+      <category name="Eclipse 3.5-3.6"/>
    </feature>
    <feature url="features/EclipseSkins_1.4.3.jar" id="EclipseSkins" version="1.4.3">
-      <category name="Eclipse 3.3"/>
+      <category name="Eclipse 3.3-3.4"/>
    </feature>
-   <feature url="features/EclipseSkins_1.5.3.200905242217.jar" id="EclipseSkins" version="1.5.3.200905242217">
-      <category name="Eclipse 3.4-3.5"/>
-   </feature>
-   <feature url="features/de.loskutov.BytecodeOutline.feature_2.2.0.jar" id="de.loskutov.BytecodeOutline.feature" version="2.2.0">
-      <category name="Eclipse 3.2"/>
-   </feature>
-   <feature url="features/de.loskutov.BytecodeOutline.feature_2.2.3.jar" id="de.loskutov.BytecodeOutline.feature" version="2.2.3">
-      <category name="Eclipse 3.3"/>
+   <feature url="features/EclipseSkins_1.5.4.qualifier.jar" id="EclipseSkins" version="1.5.4.qualifier">
+      <category name="Eclipse 3.5-3.6"/>
    </feature>
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.2.12.jar" id="de.loskutov.BytecodeOutline.feature" version="2.2.12">
-      <category name="Eclipse 3.4-3.5"/>
+      <category name="Eclipse 3.3-3.4"/>
    </feature>
-   <feature url="features/DataHierarchy_0.0.3.200906281946.jar" id="DataHierarchy" version="0.0.3.200906281946">
-      <category name="Beta"/>
+   <feature url="features/de.loskutov.BytecodeOutline.feature_2.3.jar" id="de.loskutov.BytecodeOutline.feature" version="2.3">
+      <category name="Eclipse 3.5-3.6"/>
    </feature>
+   <feature url="features/DataHierarchy_1.0.0.qualifier.jar" id="DataHierarchy" version="1.0.0.qualifier">
+      <category name="Eclipse 3.5-3.6"/>
+   </feature>
+
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.1.jar" url="http://jdepend4eclipse.googlecode.com/files/de.loskutov.eclipse.jdepend_1.2.1.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.5.200910041235.jar" url="http://filesync4eclipse.googlecode.com/files/de.loskutov.FileSync_1.3.5.200910041235.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_1.8.2.jar" url="http://anyedittools.googlecode.com/files/de.loskutov.anyedit.AnyEditTools_1.8.2.jar"/>
@@ -56,40 +48,28 @@
    <archive path="plugins/de.loskutov.BytecodeOutline_2.2.0.jar" url="http://download.forge.objectweb.org/asm/de.loskutov.BytecodeOutline_2.2.0.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.2.3.jar" url="http://download.forge.objectweb.org/asm/de.loskutov.BytecodeOutline_2.2.3.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.2.12.jar" url="http://skin4eclipse.googlecode.com/files/de.loskutov.BytecodeOutline_2.2.12.jar"/>
-   <archive path="plugins/de.loskutov.DataHierarchy_0.0.3.200906281946.jar" url="http://datahierarchy.googlecode.com/files/de.loskutov.DataHierarchy_0.0.3.200906281946.jar"/>
-   <category-def name="Eclipse 3.1-3.5" label="Eclipse 3.1 - 3.5 plugins">
+
+   <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.2.qualifier.jar"
+            url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.2.jar"/>
+   <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.4.qualifier.jar"
+            url="http://skin4eclipse.googlecode.com/files/de.loskutov.eclipseskins.extvs_1.5.4.qualifier.jar"/>
+   <archive path="plugins/de.loskutov.FileSync_1.3.6.qualifier.jar"
+            url="http://filesync4eclipse.googlecode.com/files/de.loskutov.FileSync_1.3.6.qualifier.jar"/>
+   <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.qualifier.jar"
+            url="http://datahierarchy.googlecode.com/files/de.loskutov.DataHierarchy_1.0.0.qualifier.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.3.1.qualifier.jar"
+            url="http://anyedittools.googlecode.com/files/de.loskutov.anyedit.AnyEditTools_2.3.1.qualifier.jar"/>
+   <archive path="plugins/de.loskutov.BytecodeOutline_2.3.jar"
+            url="http://skin4eclipse.googlecode.com/files/de.loskutov.BytecodeOutline_2.3.jar"/>
+
+   <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
       <description>
-         Eclipse 3.1 - 3.5 compatible plugins provided by Andrei Loskutov
+         Eclipse 3.3 - 3.4 compatible plugins provided by Andrei Loskutov
       </description>
    </category-def>
-   <category-def name="Eclipse 3.2-3.3" label="Eclipse 3.2 - 3.3 plugins">
+   <category-def name="Eclipse 3.5-3.6" label="Eclipse 3.5 - 3.6 plugins">
       <description>
-         Eclipse 3.2 - 3.3 compatible plugins provided by Andrei Loskutov
-      </description>
-   </category-def>
-   <category-def name="Eclipse 3.1" label="Eclipse 3.1 plugins">
-      <description>
-         Eclipse 3.1 compatible plugins provided by Andrei Loskutov
-      </description>
-   </category-def>
-   <category-def name="Eclipse 3.2" label="Eclipse 3.2 plugins">
-      <description>
-         Eclipse 3.2 compatible plugins provided by Andrei Loskutov
-      </description>
-   </category-def>
-   <category-def name="Eclipse 3.3" label="Eclipse 3.3 plugins">
-      <description>
-         Eclipse 3.3 compatible plugins provided by Andrei Loskutov
-      </description>
-   </category-def>
-   <category-def name="Eclipse 3.4-3.5" label="Eclipse 3.4 - 3.5 plugins">
-      <description>
-         Eclipse 3.4 - 3.5 compatible plugins provided by Andrei Loskutov
-      </description>
-   </category-def>
-   <category-def name="Eclipse 3.3-3.5" label="Eclipse 3.3 - 3.5 plugins">
-      <description>
-         Eclipse 3.3 - 3.5 compatible plugins provided by Andrei Loskutov
+         Eclipse 3.5 - 3.6 compatible plugins provided by Andrei Loskutov
       </description>
    </category-def>
    <category-def name="Beta" label="Beta">
