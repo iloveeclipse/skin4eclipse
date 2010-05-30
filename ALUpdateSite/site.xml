@@ -51,7 +51,7 @@
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.2.201005301956.jar"
             url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.2.201005301956.jar"/>
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.4.201005301956.jar"
-            url="http://skin4eclipse..eclipselabs.org.codespot.com/files/de.loskutov.eclipseskins.extvs_1.5.4.201005301956.jar"/>
+            url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipseskins.extvs_1.5.4.201005301956.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.6.201005301956.jar"
             url="http://filesync4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.FileSync_1.3.6.201005301956.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"
