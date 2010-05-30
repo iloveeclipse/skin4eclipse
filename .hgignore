@@ -3,3 +3,5 @@ syntax: regexp
 ^EclipseSkins/bin$
 syntax: regexp
 ^EclipseSkins-test/bin$
+syntax: regexp
+\.jar$
