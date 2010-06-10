@@ -2,7 +2,7 @@
 <feature
       id="EclipseSkins"
       label="Extended VS Presentation"
-      version="1.5.4.qualifier"
+      version="1.5.5.qualifier"
       provider-name="Andrei Loskutov"
       plugin="de.loskutov.eclipseskins.extvs"
       image="loskutov32.gif">

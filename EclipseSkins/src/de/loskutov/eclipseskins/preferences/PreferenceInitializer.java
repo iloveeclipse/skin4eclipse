@@ -28,8 +28,8 @@ import de.loskutov.eclipseskins.ThemeWrapper;
  * @author fabioz
  */
 public class PreferenceInitializer
-        extends
-            AbstractPreferenceInitializer {
+extends
+AbstractPreferenceInitializer {
 
     private static final String [] LAYOUT_PREFS = {
         ThemeConstants.MAX_TAB_WIDTH,
@@ -47,6 +47,7 @@ public class PreferenceInitializer
         ThemeConstants.ENABLE_NEW_MIN_MAX,
         ThemeConstants.ALWAYS_SORT_EDITOR_TABS,
         ThemeConstants.ALWAYS_SORT_VIEW_TABS,
+        ThemeConstants.HIDE_VIEW_TITLE,
     };
 
     /* (non-Javadoc)
@@ -102,6 +103,7 @@ public class PreferenceInitializer
         store.setToDefault(ThemeConstants.ALWAYS_SORT_EDITOR_TABS);
         store.setToDefault(ThemeConstants.ALWAYS_SORT_VIEW_TABS);
         store.setToDefault(ThemeConstants.ESC_CLOSES_DETACHED_VIEWS);
+        store.setToDefault(ThemeConstants.HIDE_VIEW_TITLE);
         /*
          * workbench prefs used here
          */
@@ -139,6 +141,7 @@ public class PreferenceInitializer
         setBoolean(store, theme, ThemeConstants.CROP_IN_THE_MIDDLE);
         setBoolean(store, theme, ThemeConstants.SHOW_EDITOR_ICON);
         setBoolean(store, theme, ThemeConstants.SHOW_VIEW_ICON);
+        setBoolean(store, theme, ThemeConstants.HIDE_VIEW_TITLE);
         setBoolean(store, theme, ThemeConstants.ALWAYS_SORT_EDITOR_TABS);
         setBoolean(store, theme, ThemeConstants.ALWAYS_SORT_VIEW_TABS);
         setBoolean(store, theme, ThemeConstants.ESC_CLOSES_DETACHED_VIEWS);

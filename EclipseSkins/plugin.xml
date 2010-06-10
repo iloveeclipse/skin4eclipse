@@ -190,6 +190,9 @@
             name="de.loskutov.EclipseSkins.showViewIcon"
             value="true"/>
       <data
+            name="de.loskutov.EclipseSkins.hideViewTitle"
+            value="false"/>
+      <data
             name="de.loskutov.EclipseSkins.maxTabsWidth"
             value="18"/>
       <data
@@ -268,6 +271,9 @@
          <data
                name="de.loskutov.EclipseSkins.showViewIcon"
                value="true"/>
+         <data
+               name="de.loskutov.EclipseSkins.hideViewTitle"
+               value="false"/>
          <data
                name="de.loskutov.EclipseSkins.border.size"
                value="2"/>
@@ -355,7 +361,10 @@
                value="false"/>
          <data
                name="de.loskutov.EclipseSkins.showViewIcon"
-               value="false"/>
+               value="true"/>
+         <data
+               name="de.loskutov.EclipseSkins.hideViewTitle"
+               value="true"/>
          <data
                name="de.loskutov.EclipseSkins.border.size"
                value="1"/>

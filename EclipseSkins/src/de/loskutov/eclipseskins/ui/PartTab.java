@@ -50,7 +50,7 @@ public class PartTab extends Canvas implements PaintListener {
     private TabArea tabArea;
 
     private final boolean isView;
-    private boolean boldSelected;
+    private final boolean boldSelected;
     private boolean selected;
     private boolean hasMenuFocus;
     private boolean isHidden;
@@ -63,10 +63,12 @@ public class PartTab extends Canvas implements PaintListener {
     private Point cacheBoldShort;
     private Point cacheRegularLong;
     private Point cacheRegularShort;
+    private final Point cacheNoText;
 
     private int heightWithImage;
     private int heightWithoutImage;
     private boolean isShowIcon;
+    private boolean hideViewTitle;
     private Point maxSize;
     private Point minSize;
 
@@ -81,12 +83,13 @@ public class PartTab extends Canvas implements PaintListener {
     Color colorHighlight;
     Color colorDark;
     Color colorShadow;
-
     int xPad;
     int yPad;
 
+
     public PartTab(final TabArea parent, int style, IPresentablePart part, boolean isView) {
         super(parent, style);
+        cacheNoText = new Point(0, 0);
         tabArea = parent;
         this.part = part;
         this.boldSelected = ! isView;
@@ -162,18 +165,21 @@ public class PartTab extends Canvas implements PaintListener {
                 gc.dispose();
             }
         }
-
-        if (boldSelected && selected){
-            if(assumeEnoughSpace){
-                textSize = cacheBoldLong;
-            } else {
-                textSize = cacheBoldShort;
-            }
+        if(hideViewTitle){
+            textSize = cacheNoText;
         } else {
-            if(assumeEnoughSpace){
-                textSize = cacheRegularLong;
+            if (boldSelected && selected){
+                if(assumeEnoughSpace){
+                    textSize = cacheBoldLong;
+                } else {
+                    textSize = cacheBoldShort;
+                }
             } else {
-                textSize = cacheRegularShort;
+                if(assumeEnoughSpace){
+                    textSize = cacheRegularLong;
+                } else {
+                    textSize = cacheRegularShort;
+                }
             }
         }
 
@@ -204,8 +210,10 @@ public class PartTab extends Canvas implements PaintListener {
             newName = part.getName();
         }
         if(newName != null && !newName.equals(partTextUnchanged)){
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed input from "
-                    + partTextUnchanged + " to " + newName);
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed input from "
+                        + partTextUnchanged + " to " + newName);
+            }
 
             setPartText(null);
             // save the real part name for the next time
@@ -300,21 +308,27 @@ public class PartTab extends Canvas implements PaintListener {
         }
 
         int x = leftBorder + xPad;
-        String partName = computeTabText();
+        String partName;
         Point stringExtent;
-        if (boldSelected && selected) {
-            gc.setFont(tabArea.getBoldFont());
-            if(tabNameReduced){
-                stringExtent = cacheBoldShort;
-            } else {
-                stringExtent = cacheBoldLong;
-            }
+        if(hideViewTitle){
+            stringExtent = cacheNoText;
+            partName = "";
         } else {
-            gc.setFont(tabArea.getRegularFont());
-            if(tabNameReduced){
-                stringExtent = cacheRegularShort;
+            partName = computeTabText();
+            if (boldSelected && selected) {
+                gc.setFont(tabArea.getBoldFont());
+                if(tabNameReduced){
+                    stringExtent = cacheBoldShort;
+                } else {
+                    stringExtent = cacheBoldLong;
+                }
             } else {
-                stringExtent = cacheRegularLong;
+                gc.setFont(tabArea.getRegularFont());
+                if(tabNameReduced){
+                    stringExtent = cacheRegularShort;
+                } else {
+                    stringExtent = cacheRegularLong;
+                }
             }
         }
 
@@ -350,8 +364,9 @@ public class PartTab extends Canvas implements PaintListener {
         }
 
         // foreground color remains the same if tab has focus or has menu focus
-
-        gc.drawString(partName, x, textY, true);
+        if(!hideViewTitle) {
+            gc.drawString(partName, x, textY, true);
+        }
         gc.setClipping((Rectangle)null);
     }
 
@@ -362,35 +377,49 @@ public class PartTab extends Canvas implements PaintListener {
     public void refresh(int property) {
         switch (property) {
         case IWorkbenchPartConstants.PROP_DIRTY:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:dirty");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:dirty");
+            }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             partIsDirty = part.isDirty();
             tabArea.layoutTabs();
             break;
         case IWorkbenchPartConstants.PROP_TITLE:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed title");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed title");
+            }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             break;
         case IWorkbenchPartConstants.PROP_PART_NAME:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed name");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed name");
+            }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             break;
         case IWorkbenchPartConstants.PROP_INPUT:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed input");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed input");
+            }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             break;
         case IWorkbenchPartConstants.PROP_PREFERRED_SIZE:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed pref_size");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed pref_size");
+            }
             break;
         case IWorkbenchPartConstants.PROP_CONTENT_DESCRIPTION:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed content descr");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed content descr");
+            }
             break;
         default:
-            if(PresentationPlugin.DEBUG) System.out.println("PartTab:changed?");
+            if(PresentationPlugin.DEBUG) {
+                System.out.println("PartTab:changed?");
+            }
             return;
         }
         if(!isHidden()) {
@@ -526,6 +555,10 @@ public class PartTab extends Canvas implements PaintListener {
         }
         if(isView){
             isShowIcon = theme.getBoolean(ThemeConstants.SHOW_VIEW_ICON);
+            hideViewTitle = theme.getBoolean(ThemeConstants.HIDE_VIEW_TITLE);
+            if(hideViewTitle && !isShowIcon){
+                isShowIcon = true;
+            }
         } else {
             isShowIcon = theme.getBoolean(ThemeConstants.SHOW_EDITOR_ICON);
         }

@@ -94,4 +94,6 @@ public interface ThemeConstants {
 
     String OVERRIDE_EXISTING_SESSION = ID + ".overrideExistingSession";
 
+    String HIDE_VIEW_TITLE = ID + ".hideViewTitle";
+
 }

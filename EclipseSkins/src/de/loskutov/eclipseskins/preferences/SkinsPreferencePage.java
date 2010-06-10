@@ -16,6 +16,7 @@ import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridData;
@@ -89,6 +90,7 @@ SelectionListener {
     protected Button useMaxTabWidth;
     protected Button showFileExt;
     protected Button showViewIcon;
+    protected Button hideViewTitle;
     protected Button showEditorIcon;
     protected Button cropInTheMiddle;
     protected Button minimizeToCoolbar;
@@ -213,6 +215,22 @@ SelectionListener {
                 "showViewIcon", //$NON-NLS-1$
                 getMergedBooleanPreference(ThemeConstants.SHOW_VIEW_ICON, lastUsedTheme),
                 wrappedTabsComposite);
+
+        hideViewTitle = createLabeledCheck(
+                "hideViewTitle", //$NON-NLS-1$
+                getMergedBooleanPreference(ThemeConstants.HIDE_VIEW_TITLE, lastUsedTheme),
+                wrappedTabsComposite);
+
+        SelectionAdapter selectionAdapter = new SelectionAdapter() {
+            public void widgetSelected(SelectionEvent e) {
+                if(hideViewTitle.getSelection() && !showViewIcon.getSelection()){
+                    showViewIcon.setSelection(true);
+                }
+            }
+        };
+
+        hideViewTitle.addSelectionListener(selectionAdapter);
+        showViewIcon.addSelectionListener(selectionAdapter);
 
         showEditorIcon = createLabeledCheck(
                 "showEditorIcon", //$NON-NLS-1$
@@ -438,6 +456,8 @@ SelectionListener {
                 .getSelection());
         setValue(store, ThemeConstants.SHOW_VIEW_ICON, showViewIcon
                 .getSelection());
+        setValue(store, ThemeConstants.HIDE_VIEW_TITLE, hideViewTitle
+                .getSelection());
         setValue(store, ThemeConstants.SHOW_EDITOR_ICON, showEditorIcon
                 .getSelection());
         return true;
@@ -556,6 +576,7 @@ SelectionListener {
         showFileExt.setSelection(theme.getBoolean(ThemeConstants.SHOW_FILE_EXTENSIONS));
         cropInTheMiddle.setSelection(theme.getBoolean(ThemeConstants.CROP_IN_THE_MIDDLE));
         showViewIcon.setSelection(theme.getBoolean(ThemeConstants.SHOW_VIEW_ICON));
+        hideViewTitle.setSelection(theme.getBoolean(ThemeConstants.HIDE_VIEW_TITLE));
         showEditorIcon.setSelection(theme.getBoolean(ThemeConstants.SHOW_EDITOR_ICON));
     }
 
