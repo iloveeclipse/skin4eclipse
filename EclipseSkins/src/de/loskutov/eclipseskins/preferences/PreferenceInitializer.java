@@ -48,6 +48,7 @@ AbstractPreferenceInitializer {
         ThemeConstants.ALWAYS_SORT_EDITOR_TABS,
         ThemeConstants.ALWAYS_SORT_VIEW_TABS,
         ThemeConstants.HIDE_VIEW_TITLE,
+        ThemeConstants.GTK_TOOLBAR_FIX,
     };
 
     /* (non-Javadoc)
@@ -69,6 +70,7 @@ AbstractPreferenceInitializer {
         store.setDefault(ThemeConstants.ALWAYS_SORT_EDITOR_TABS, false);
         store.setDefault(ThemeConstants.ALWAYS_SORT_VIEW_TABS, false);
         store.setDefault(ThemeConstants.ESC_CLOSES_DETACHED_VIEWS, true);
+        store.setDefault(ThemeConstants.GTK_TOOLBAR_FIX, 0);
         IPreferenceStore apiStore = getApiPrefStore();
         apiStore.setDefault(ThemeConstants.ENABLE_NEW_MIN_MAX, true);
         // all other values are non-default and will be initialized per theme
@@ -103,6 +105,7 @@ AbstractPreferenceInitializer {
         store.setToDefault(ThemeConstants.ALWAYS_SORT_EDITOR_TABS);
         store.setToDefault(ThemeConstants.ALWAYS_SORT_VIEW_TABS);
         store.setToDefault(ThemeConstants.ESC_CLOSES_DETACHED_VIEWS);
+        store.setToDefault(ThemeConstants.GTK_TOOLBAR_FIX);
         store.setToDefault(ThemeConstants.HIDE_VIEW_TITLE);
         /*
          * workbench prefs used here
@@ -145,6 +148,7 @@ AbstractPreferenceInitializer {
         setBoolean(store, theme, ThemeConstants.ALWAYS_SORT_EDITOR_TABS);
         setBoolean(store, theme, ThemeConstants.ALWAYS_SORT_VIEW_TABS);
         setBoolean(store, theme, ThemeConstants.ESC_CLOSES_DETACHED_VIEWS);
+        setInt(store, theme, ThemeConstants.GTK_TOOLBAR_FIX);
 
         /*
          * the followed prefs are not present on the Prefs GUI or are not own by our plugin

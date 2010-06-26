@@ -38,6 +38,7 @@ import org.eclipse.ui.themes.ITheme;
 
 import de.loskutov.eclipseskins.PresentationPlugin;
 import de.loskutov.eclipseskins.ThemeConstants;
+import de.loskutov.eclipseskins.ui.UIUtils;
 
 
 /**
@@ -50,13 +51,15 @@ SelectionListener {
         private final int defaultValue;
         private final Text text;
         private final int minValue;
+        private final int maxValue;
 
         IntModifyListener(Text text, int defaultValue,
-                int minValue) {
+                int minValue, int maxValue) {
             super();
             this.text = text;
             this.defaultValue = defaultValue;
             this.minValue = minValue;
+            this.maxValue = maxValue;
         }
 
         public void modifyText(ModifyEvent e) {
@@ -66,7 +69,7 @@ SelectionListener {
             }
             try {
                 int value = Integer.parseInt(number);
-                if (value < minValue) {
+                if (value < minValue || value > maxValue) {
                     text.setText("" + defaultValue);
                 }
             } catch (NumberFormatException ex) {
@@ -81,6 +84,7 @@ SelectionListener {
     private static final int DEFAULT_BORDER_SIZE = 1;
     private static final int DEFAULT_PADDING_X = 2;
     private static final int DEFAULT_PADDING_Y = 2;
+    private static final int DEFAULT_TOOLBAR_FIX = 0;
 
     protected Text tabWidthText;
     protected Text moveTabAmount;
@@ -102,6 +106,7 @@ SelectionListener {
     private Button alwaysSortEditorTabs;
     private Button alwaysSortViewTabs;
     private Button escClosesDetachedViews;
+    private Text gtkToolbarFix;
 
     public SkinsPreferencePage() {
         super();
@@ -269,17 +274,26 @@ SelectionListener {
                 wrappedTabsComposite,
                 false);
         tabPaddingY.setTextLimit(2);
-
+        if(UIUtils.isGtk){
+            gtkToolbarFix = createLabeledText(
+                    "gtkToolbarFix", //$NON-NLS-1$
+                    "" + getMergedIntPreference(ThemeConstants.GTK_TOOLBAR_FIX, lastUsedTheme),
+                    wrappedTabsComposite,
+                    false);
+            gtkToolbarFix.setTextLimit(2);
+            gtkToolbarFix.addModifyListener(new IntModifyListener(gtkToolbarFix,
+                    DEFAULT_TOOLBAR_FIX, 0, 22));
+        }
         borderSize.addModifyListener(new IntModifyListener(borderSize,
-                DEFAULT_BORDER_SIZE, 0));
+                DEFAULT_BORDER_SIZE, 0, 100));
         moveTabAmount.addModifyListener(new IntModifyListener(moveTabAmount,
-                DEFAULT_MOVE_TAB_AMOUNT, 1));
+                DEFAULT_MOVE_TAB_AMOUNT, 1, 1000));
         tabWidthText.addModifyListener(new IntModifyListener(tabWidthText,
-                DEFAULT_MAX_TAB_WIDTH, 1));
+                DEFAULT_MAX_TAB_WIDTH, 1, 1000));
         tabPaddingX.addModifyListener(new IntModifyListener(tabPaddingX,
-                DEFAULT_PADDING_X, 0));
+                DEFAULT_PADDING_X, 0, 100));
         tabPaddingY.addModifyListener(new IntModifyListener(tabPaddingY,
-                DEFAULT_PADDING_Y, 0));
+                DEFAULT_PADDING_Y, 0, 100));
 
         useMaxTabWidth.addSelectionListener(new SelectionListener() {
             public void widgetSelected(SelectionEvent e) {
@@ -406,6 +420,14 @@ SelectionListener {
             setValue(store, ThemeConstants.TAB_PADDING_Y, padYInt);
         } catch (Exception e) {
             store.setValue(ThemeConstants.TAB_PADDING_Y, DEFAULT_PADDING_Y);
+        }
+        if(UIUtils.isGtk) {
+            try {
+                int gtkFix = Integer.parseInt(gtkToolbarFix.getText());
+                setValue(store, ThemeConstants.GTK_TOOLBAR_FIX, gtkFix);
+            } catch (Exception e) {
+                store.setValue(ThemeConstants.GTK_TOOLBAR_FIX, DEFAULT_TOOLBAR_FIX);
+            }
         }
         store.setValue(ThemeConstants.CLOSE_TAB_ON_MIDDLE_CLICK, closeTabOnMiddleClick
                 .getSelection());
@@ -572,6 +594,9 @@ SelectionListener {
         borderSize.setText("" + theme.getInt(ThemeConstants.BORDER_SIZE));
         tabPaddingX.setText("" + theme.getInt(ThemeConstants.TAB_PADDING_X));
         tabPaddingY.setText("" + theme.getInt(ThemeConstants.TAB_PADDING_Y));
+        if(UIUtils.isGtk) {
+            gtkToolbarFix.setText("" + theme.getInt(ThemeConstants.GTK_TOOLBAR_FIX));
+        }
         useMaxTabWidth.setSelection(theme.getBoolean(ThemeConstants.USE_MAX_TAB_WIDTH));
         showFileExt.setSelection(theme.getBoolean(ThemeConstants.SHOW_FILE_EXTENSIONS));
         cropInTheMiddle.setSelection(theme.getBoolean(ThemeConstants.CROP_IN_THE_MIDDLE));

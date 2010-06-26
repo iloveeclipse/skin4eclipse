@@ -30,6 +30,7 @@ import de.loskutov.eclipseskins.PresentationPlugin;
 import de.loskutov.eclipseskins.ThemeConstants;
 import de.loskutov.eclipseskins.ThemeWrapper;
 import de.loskutov.eclipseskins.ui.PartTab;
+import de.loskutov.eclipseskins.ui.UIUtils;
 import de.loskutov.eclipseskins.ui.menu.StandardViewMenu;
 
 /**
@@ -135,11 +136,20 @@ public class VSViewStackPresentation extends VSStackPresentation {
         int tabButtonsPosX = 0;
         int tabAreaPosY = contentArea.y;
         int maxToolbarWidth = 0;
-        Point toolBarSize;
+        int gtkHeightFix = 0;
+        int toolbarHeight = 0;
+        int toolbarWidth = 0;
         if (toolBar != null && toolbarVisible) {
-            toolBarSize = toolBar.computeSize(SWT.DEFAULT, SWT.DEFAULT);
+            Point toolBarSize = toolBar.computeSize(SWT.DEFAULT, SWT.DEFAULT);
+            toolbarHeight = toolBarSize.y;
+            if (UIUtils.isGtk) {
+                gtkHeightFix = theme.getInt(ThemeConstants.GTK_TOOLBAR_FIX);
+            } else {
+                gtkHeightFix = 0;
+            }
+            toolbarWidth = toolBarSize.x;
         } else {
-            toolBarSize = new Point(0, 0);
+            //toolBarSize = new Point(0, 0);
         }
 
         boolean allowToolbarInTabArea = false;
@@ -148,13 +158,12 @@ public class VSViewStackPresentation extends VSStackPresentation {
             int tabAreaHeight;
             if (tabsVisible) {
                 tabAreaHeight = tabArea.computeHeight();
-                maxToolbarWidth = clientArea.width - tabArea.getEstimatedWidth()
-                - borderSize;
+                maxToolbarWidth = clientArea.width - tabArea.getEstimatedWidth() - borderSize;
                 allowToolbarInTabArea = tabArea.hasEnoughSpace() && maxToolbarWidth > 0
-                && maxToolbarWidth > toolBarSize.x;
+                        && maxToolbarWidth > toolbarWidth;
                 if (allowToolbarInTabArea) {
-                    tabAreaHeight = Math.max(tabAreaHeight, toolBarSize.y);
-                    if (tabAreaHeight == toolBarSize.y) {
+                    tabAreaHeight = Math.max(tabAreaHeight, toolbarHeight - gtkHeightFix);
+                    if (tabAreaHeight == toolbarHeight - gtkHeightFix) {
                         tabAreaHeight += borderSize_x_2;
                         if (!topPosition) {
                             tabAreaHeight += borderSize;
@@ -207,7 +216,7 @@ public class VSViewStackPresentation extends VSStackPresentation {
 
         // Layout view toolBar
         if (toolBar != null) {
-            boolean tooLessHeight = contentArea.height - topHeight - CONTROL_GAP <= toolBarSize.y;
+            boolean tooLessHeight = contentArea.height - topHeight - CONTROL_GAP <= toolbarHeight - gtkHeightFix;
             if (!toolbarVisible
                     || (tooLessHeight && (!tabsVisible || !allowToolbarInTabArea))) {
                 toolBar.setVisible(false);
@@ -222,13 +231,13 @@ public class VSViewStackPresentation extends VSStackPresentation {
                     }
                     // tab area may have space for toolbar...
                     Point toolBarDisplayPos = presentationControl.toDisplay(clientArea.x
-                            + clientArea.width - toolBarSize.x - borderSize, toolbarYpos);
+                            + clientArea.width - toolbarWidth - borderSize, toolbarYpos);
                     Point toolBarControlPos = toolBar.getParent().toControl(
                             toolBarDisplayPos);
                     toolBar.setBackground(theme
                             .getColor(ThemeConstants.TAB_COLOR_NOFOCUS));
                     toolBar.setBounds(toolBarControlPos.x, toolBarControlPos.y,
-                            toolBarSize.x, toolBarSize.y);
+                            toolbarWidth, toolbarHeight - gtkHeightFix);
 
                 } else {
                     // no place on tab area or it is invisible
@@ -240,8 +249,8 @@ public class VSViewStackPresentation extends VSStackPresentation {
                     toolBar.setBackground(theme.getColor(ThemeConstants.TAB_COLOR_FOCUS));
                     toolBar.setBounds(toolBarControlPos.x + borderSize,
                             toolBarControlPos.y, clientArea.width - borderSize_x_2,
-                            toolBarSize.y);
-                    topHeight += toolBarSize.y + CONTROL_GAP;
+                            toolbarHeight - gtkHeightFix);
+                    topHeight += toolbarHeight - gtkHeightFix + CONTROL_GAP;
                 }
                 toolBar.setVisible(true);
             }
