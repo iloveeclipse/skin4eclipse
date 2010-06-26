@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.dialogs.InputDialog;
@@ -238,7 +237,7 @@ public class ClosedPartListControl extends AbstractPartListControl  {
          * TODO: remove this code once bug 62405 is fixed for the mainstream GTK
          * version
          */
-        final int ignoreEventCount = Platform.getWS().equals(Platform.WS_GTK) ? 4 : 1;
+        final int ignoreEventCount = UIUtils.isGtk ? 4 : 1;
 
         table.addMouseMoveListener(new MyMouseMoveListener(ignoreEventCount));
 

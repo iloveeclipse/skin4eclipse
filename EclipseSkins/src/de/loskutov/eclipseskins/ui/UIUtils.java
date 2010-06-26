@@ -11,8 +11,10 @@
  *******************************************************************************/
 package de.loskutov.eclipseskins.ui;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -30,6 +32,8 @@ import de.loskutov.eclipseskins.PresentationPlugin;
  * @author Andrei
  */
 public class UIUtils {
+
+    public static final boolean isGtk = Platform.WS_GTK.equalsIgnoreCase(SWT.getPlatform());
 
     /**
      * used to get icon from props file

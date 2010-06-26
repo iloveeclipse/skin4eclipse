@@ -732,7 +732,7 @@ IInformationControlExtension3 {
             }
 
             // WORKAROUND for disposing control too early on menu events on gtk (linux)
-            if(menuAboutToShow && "gtk".equalsIgnoreCase(SWT.getPlatform())){
+            if(menuAboutToShow && UIUtils.isGtk){
                 if (PresentationPlugin.DEBUG) {
                     System.out.println("shellDeactivate on gtk ignored!!!");
                 }
