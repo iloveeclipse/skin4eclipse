@@ -430,7 +430,9 @@ public class TestPerformance extends TestCase {
 
     private static void update(Display display) {
         display.update();
-//        display.readAndDispatch();
+        while(display.readAndDispatch()){
+        	;
+        }
     }
 
     private void wait(IWorkbenchWindow window) {
