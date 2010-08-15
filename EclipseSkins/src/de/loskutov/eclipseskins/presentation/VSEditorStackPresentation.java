@@ -61,14 +61,14 @@ public class VSEditorStackPresentation extends VSStackPresentation {
 
     protected void layout() {
         if(!isVisible){
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println("editor: layout cancelled as invisible");
             }
             return;
         }
         // Note that we do make the layout even if it's empty
         // because we want to show the toolbar with the closed editors.
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println("editor: do layout");
         }
 
@@ -84,7 +84,7 @@ public class VSEditorStackPresentation extends VSStackPresentation {
         boolean minimized = isMinimized();
 
         if (minimized && currentPart != null) {
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println("editor:cancel layout as minimized");
             }
 
@@ -194,7 +194,7 @@ public class VSEditorStackPresentation extends VSStackPresentation {
         if(presentationControl == null){
             return;
         }
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_PAINT) {
             System.out.println("editor:paint");
         }
 

@@ -210,7 +210,7 @@ public class PartTab extends Canvas implements PaintListener {
             newName = part.getName();
         }
         if(newName != null && !newName.equals(partTextUnchanged)){
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed input from "
                         + partTextUnchanged + " to " + newName);
             }
@@ -377,7 +377,7 @@ public class PartTab extends Canvas implements PaintListener {
     public void refresh(int property) {
         switch (property) {
         case IWorkbenchPartConstants.PROP_DIRTY:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:dirty");
             }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
@@ -386,38 +386,38 @@ public class PartTab extends Canvas implements PaintListener {
             tabArea.layoutTabs();
             break;
         case IWorkbenchPartConstants.PROP_TITLE:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed title");
             }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             break;
         case IWorkbenchPartConstants.PROP_PART_NAME:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed name");
             }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             break;
         case IWorkbenchPartConstants.PROP_INPUT:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed input");
             }
             setToolTipText(tabArea.getPresentation().getPartTooltip(part));
             setPartText(null);
             break;
         case IWorkbenchPartConstants.PROP_PREFERRED_SIZE:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed pref_size");
             }
             break;
         case IWorkbenchPartConstants.PROP_CONTENT_DESCRIPTION:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed content descr");
             }
             break;
         default:
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println("PartTab:changed?");
             }
             return;

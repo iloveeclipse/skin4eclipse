@@ -1,1 +1,6 @@
 de.loskutov.eclipseskins.extvs/debug=false
+de.loskutov.eclipseskins.extvs/debug/editors=false
+de.loskutov.eclipseskins.extvs/debug/views=false
+de.loskutov.eclipseskins.extvs/debug/layout=false
+de.loskutov.eclipseskins.extvs/debug/paint=false
+de.loskutov.eclipseskins.extvs/debug/state=false

@@ -229,7 +229,7 @@ public class PartTitle extends Canvas implements PaintListener {
     }
 
     public void setPresentablePart(IPresentablePart part) {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             System.out.println("title: set part: " + part.getName());
         }
         this.part = part;

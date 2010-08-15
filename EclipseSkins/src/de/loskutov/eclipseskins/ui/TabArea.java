@@ -115,7 +115,7 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public int computeHeight() {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:comupteHeight");
         }
         if(height != 0){
@@ -149,7 +149,7 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public Point computeSize(int wHint, int hHint, boolean changed) {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:comupteSize(hint): " + wHint);
         }
         int minWidth = 0;
@@ -169,7 +169,7 @@ public final class TabArea extends Canvas implements PaintListener {
             lastComputedWidth = minWidth;
             hasEnoughSpace = false;
         }
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:hasSpace: " + hasEnoughSpace);
         }
 
@@ -199,7 +199,7 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public void addTab(int index, PartTab tab) {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_STATE) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:add tab");
         }
         if (tabs.contains(tab)) {
@@ -223,7 +223,7 @@ public final class TabArea extends Canvas implements PaintListener {
         if(tab == null || presentation == null) {
             return;
         }
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_STATE) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:remove tab");
         }
         boolean removed = tabs.remove(tab);
@@ -246,7 +246,7 @@ public final class TabArea extends Canvas implements PaintListener {
 
     public void selectPart(IPresentablePart part) {
         initDone = true;
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_STATE) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:select part");
         }
         for (int i = 0; i < tabs.size(); i++) {
@@ -372,7 +372,7 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public void redraw(){
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_PAINT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:redraw");
         }
         //        super.redraw();
@@ -422,7 +422,7 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public void paintControl(PaintEvent e) {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_PAINT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:paint");
         }
         if(!initDone){
@@ -628,13 +628,13 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public void setBounds(int x, int y, int width, int height) {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:setBounds");
         }
         Rectangle oldBounds = getBounds();
         super.setBounds(x, y, width, height);
         if(!initDone || width == 0 || height == 0){
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println((presentation.isView()? "view" : "edit") + "Tabs: setBounds cancelled as invisible");
             }
             return;
@@ -647,14 +647,14 @@ public final class TabArea extends Canvas implements PaintListener {
             layoutTabs();
             themeChanged = false;
         } else {
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println((presentation.isView()? "view" : "edit") + "Tabs: setBounds cancelled as unneeded");
             }
         }
     }
 
     protected void layoutTabs() {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:layout");
         }
         Rectangle clientArea = getClientArea();
@@ -767,7 +767,7 @@ public final class TabArea extends Canvas implements PaintListener {
             needLayout = true;
         }
         if(needLayout) {
-            if(PresentationPlugin.DEBUG) {
+            if(PresentationPlugin.DEBUG_STATE) {
                 System.out.println((presentation.isView()? "view" : "edit") + "Tabs:setSelectedTabVisible");
             }
             layoutTabs();
@@ -776,7 +776,7 @@ public final class TabArea extends Canvas implements PaintListener {
     }
 
     public void setVisible(boolean visible) {
-        if(PresentationPlugin.DEBUG) {
+        if(PresentationPlugin.DEBUG_STATE) {
             System.out.println((presentation.isView()? "view" : "edit") + "Tabs:setVisible: " + visible + ", was: " + this.isVisible());
         }
         super.setVisible(visible);

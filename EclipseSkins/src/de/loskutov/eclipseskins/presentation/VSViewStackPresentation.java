@@ -73,14 +73,14 @@ public class VSViewStackPresentation extends VSStackPresentation {
 
     protected void layout() {
         if (!isVisible) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println(getDebugPartName() + ": cancel layout as invisible");
             }
 
             return;
         }
         if (parts.isEmpty()) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println(getDebugPartName() + ": cancel layout as no parts");
             }
 
@@ -88,7 +88,7 @@ public class VSViewStackPresentation extends VSStackPresentation {
             tabButtons.setVisible(false);
             return;
         }
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println(getDebugPartName() + ": do layout");
         }
 
@@ -101,7 +101,7 @@ public class VSViewStackPresentation extends VSStackPresentation {
 
         // handle minimized state
         if (isMinimized()) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println(getDebugPartName() + ": cancel layout as minimized");
             }
 
@@ -263,7 +263,7 @@ public class VSViewStackPresentation extends VSStackPresentation {
 
         // Layout content
         if (hasContent && contentArea.height > 2) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println(getDebugPartName() + ": layout content");
             }
 
@@ -275,7 +275,7 @@ public class VSViewStackPresentation extends VSStackPresentation {
                     - borderSize_x_2, contentArea.height);
             control.setVisible(true);
         } else if (hasContent) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println(getDebugPartName()
                         + ": layout content canceled as invisible");
             }
@@ -340,7 +340,7 @@ public class VSViewStackPresentation extends VSStackPresentation {
     }
 
     public void paintControl(PaintEvent e) {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_PAINT) {
             System.out.println(getDebugPartName() + ": paint");
         }
 

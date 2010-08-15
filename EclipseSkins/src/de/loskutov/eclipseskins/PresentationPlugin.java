@@ -14,6 +14,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -34,6 +35,12 @@ public class PresentationPlugin extends AbstractUIPlugin {
     // Resource bundle.
     private ResourceBundle resourceBundle;
 
+    public static boolean DEBUG_VIEWS;
+    public static boolean DEBUG_EDITORS;
+    public static boolean DEBUG_LAYOUT;
+    public static boolean DEBUG_PAINT;
+    public static boolean DEBUG_STATE;
+
     public static boolean DEBUG;
 
     /**
@@ -53,6 +60,19 @@ public class PresentationPlugin extends AbstractUIPlugin {
     public void start(BundleContext context) throws Exception {
         super.start(context);
         DEBUG = isDebugging();
+        if(DEBUG) {
+            String id = getId();
+            String option = Platform.getDebugOption(id + "/debug/views");
+            DEBUG_VIEWS = Boolean.valueOf(option).booleanValue();
+            option = Platform.getDebugOption(id + "/debug/editors");
+            DEBUG_EDITORS = Boolean.valueOf(option).booleanValue();
+            option = Platform.getDebugOption(id + "/debug/layout");
+            DEBUG_LAYOUT = Boolean.valueOf(option).booleanValue();
+            option = Platform.getDebugOption(id + "/debug/paint");
+            DEBUG_PAINT = Boolean.valueOf(option).booleanValue();
+            option = Platform.getDebugOption(id + "/debug/state");
+            DEBUG_STATE = Boolean.valueOf(option).booleanValue();
+        }
     }
 
     /**
