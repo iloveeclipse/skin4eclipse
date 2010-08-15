@@ -60,13 +60,8 @@ import de.loskutov.eclipseskins.PresentationPlugin;
 import de.loskutov.eclipseskins.ThemeConstants;
 import de.loskutov.eclipseskins.ThemeWrapper;
 
-/**
- * @author Andrei
- *
- */
 public abstract class AbstractPartListControl implements IInformationControl,
-IInformationControlExtension, IInformationControlExtension2,
-IInformationControlExtension3 {
+        IInformationControlExtension, IInformationControlExtension2, IInformationControlExtension3 {
 
     protected TabArea tabArea;
 
@@ -113,11 +108,6 @@ IInformationControlExtension3 {
 
     protected NamePatternFilter namePatternFilter;
 
-    /**
-     * Remembers the bounds for this information control.
-     *
-     * @since 3.0
-     */
     protected Rectangle fBounds;
 
     protected Rectangle fTrim;
@@ -144,17 +134,22 @@ IInformationControlExtension3 {
 
     public boolean menuAboutToShow;
 
-
-    /*
-     *  (non-Javadoc)
-     * @see org.eclipse.jface.text.IInformationControl#setBackgroundColor(org.eclipse.swt.graphics.Color)
-     */
     public void setBackgroundColor(Color background) {
         if(PresentationPlugin.DEBUG) {
             System.out.println("backgr:" + background);
         }
-
-        fTableViewer.getTable().setBackground(background);
+        /*
+         * TODO possible workaround for bug:
+         * Depending on the GTK theme, setting the table color BEFORE or AFTER setting the
+         * the color of table items, causes elements bg color be wrongly displayed
+         * on GTK 2.20.1-0ubuntu2 / Eclipse 3.4/3.5/3.6
+         * As side effect of the workarownd, few pixels below/above table are
+         * painted in the unexpected color, without the workaround, ALL table
+         * elements are painted in wrong color
+         */
+        //if(!UIUtils.isGtk) {
+            fTableViewer.getTable().setBackground(background);
+        //}
         fFilterText.setBackground(background);
         fComposite.setBackground(background);
         fViewMenuButtonComposite.setBackground(background);
@@ -181,14 +176,8 @@ IInformationControlExtension3 {
         return fViewMenuManager;
     }
 
-    /**
-     * @param viewMenuManager
-     */
     protected abstract void fillViewMenu(IMenuManager viewMenuManager);
 
-    /* (non-Javadoc)
-     * @see org.eclipse.jface.text.IInformationControl#isFocusControl()
-     */
     public boolean isFocusControl() {
         return fFilterText.isFocusControl() || fTableViewer.getControl().isFocusControl();
     }
@@ -251,16 +240,10 @@ IInformationControlExtension3 {
         return new Point(x, y);
     }
 
-    /*
-     * @see org.eclipse.jface.text.IInformationControlExtension3#restoresSize()
-     */
     public boolean restoresSize() {
         return restoresLocation();
     }
 
-    /*
-     * @see org.eclipse.jface.text.IInformationControlExtension3#computeTrim()
-     */
     public Rectangle computeTrim() {
         if (fTrim != null) {
             return fTrim;
@@ -268,18 +251,10 @@ IInformationControlExtension3 {
         return new Rectangle(0, 0, 0, 0);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public void setSize(int width, int height) {
         rootControl.setSize(width, height);
     }
 
-
-    /**
-     * {@inheritDoc}
-     * @since 3.0
-     */
     public Rectangle getBounds() {
         return fBounds;
     }
@@ -290,9 +265,6 @@ IInformationControlExtension3 {
         setBooleanToTheme(ThemeConstants.TAB_LIST_SORT, sortTabList);
     }
 
-    /* (non-Javadoc)
-     * @see org.eclipse.jface.text.IInformationControl#setInformation(java.lang.String)
-     */
     public void setInformation(String information) {
         // no-op
     }
@@ -446,18 +418,10 @@ IInformationControlExtension3 {
     }
 
     protected TableViewer createTableViewer(Composite parent, int style) {
-
-        /*
-         * start create table etc
-         *
-         */
         Table table = new Table(parent, SWT.SINGLE | (style & ~SWT.MULTI));
         table.setLayoutData(new GridData(GridData.VERTICAL_ALIGN_BEGINNING));
         TableViewer tableViewer = new TableViewer(table) {
 
-            /* (non-Javadoc)
-             * @see org.eclipse.jface.viewers.TableViewer#internalRefresh(java.lang.Object)
-             */
             protected void internalRefresh(Object element) {
                 boolean usingMotif = "motif".equals(SWT.getPlatform()); //$NON-NLS-1$
                 try {
@@ -482,22 +446,13 @@ IInformationControlExtension3 {
         return tableViewer;
     }
 
-    /**
-     * @param tableViewer
-     */
     protected abstract void configureTableViewer(TableViewer tableViewer);
 
-    /**
-     * Implementers can modify
-     */
     protected Object getSelectedElement() {
         return ((IStructuredSelection) fTableViewer.getSelection())
         .getFirstElement();
     }
 
-    /**
-     * Implementers can modify
-     */
     protected IStructuredSelection getSelectedElements() {
         return (IStructuredSelection) fTableViewer.getSelection();
     }
@@ -541,34 +496,18 @@ IInformationControlExtension3 {
         }
     }
 
-    /**
-     * @param displayCoordinates
-     */
     protected abstract void restorePosition(Point displayCoordinates);
-    /**
-     *
-     */
+
     protected abstract void gotoSelectedElement();
 
-    /*
-     *
-     */
     public void addDisposeListener(DisposeListener listener) {
         rootControl.addDisposeListener(listener);
     }
 
-    /*
-     *  (non-Javadoc)
-     * @see org.eclipse.jface.text.IInformationControl#removeDisposeListener(org.eclipse.swt.events.DisposeListener)
-     */
     public void removeDisposeListener(DisposeListener listener) {
         rootControl.removeDisposeListener(listener);
     }
 
-    /*
-     *  (non-Javadoc)
-     * @see org.eclipse.jface.text.IInformationControl#setForegroundColor(org.eclipse.swt.graphics.Color)
-     */
     public void setForegroundColor(Color foreground) {
         if(PresentationPlugin.DEBUG) {
             System.out.println("foregr:" + foreground);
