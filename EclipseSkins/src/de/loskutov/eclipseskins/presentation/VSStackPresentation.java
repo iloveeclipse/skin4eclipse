@@ -373,7 +373,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
 
         focusListener = new MouseAdapter() {
             public void mouseDown(MouseEvent e) {
-                if (PresentationPlugin.DEBUG) {
+                if (PresentationPlugin.DEBUG_STATE) {
                     System.out.println("focus! button: " + e.button);
                 }
                 if (currentPart != null) {
@@ -410,11 +410,19 @@ public abstract class VSStackPresentation extends StackPresentation implements P
                     return;
                 }
                 IStackPresentationSite site = getSite();
-                if (site.getState() == IStackPresentationSite.STATE_MAXIMIZED) {
+                boolean maximized = site.getState() == IStackPresentationSite.STATE_MAXIMIZED;
+                if(PresentationPlugin.DEBUG_EDITORS && !isView()) {
+                    System.out.println(maximized? "going to restore" : "goint to MAX");
+                    System.out.println(getDebugPartName() + " : WAS selected in pres.!!!");
+                }
+                if (maximized) {
                     site.setState(IStackPresentationSite.STATE_RESTORED);
                     tabArea.selectPart(site.getSelectedPart());
                 } else {
                     site.setState(IStackPresentationSite.STATE_MAXIMIZED);
+                }
+                if(PresentationPlugin.DEBUG_EDITORS && !isView()) {
+                    System.out.println(currentPart.getName() + " : IS selected in pres.!!!");
                 }
             }
         };
@@ -508,7 +516,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
         }
         Object data = s.getData();
         if (data != null && !(data instanceof IWorkbenchWindow)) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_STATE) {
                 System.out.println(getDebugPartName() + " :is detached!!!");
             }
             return true;
@@ -610,7 +618,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
     }
 
     public void restoreState(IPresentationSerializer context, IMemento memento) {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             System.out.println(getDebugPartName() + ":restoreState");
         }
         /*
@@ -640,7 +648,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
         }
         memento.putInteger("toolbarVisible", getFlag(F_TOOLBAR_VISIBLE) ? 1 : 0);
         memento.putInteger("tabAreaVisible", getFlag(F_TAB_AREA_VISIBLE) ? 1 : 0);
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             System.out.println(getDebugPartName() + ":saveState");
         }
         tabArea.saveState(context, memento);
@@ -686,7 +694,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
     }
 
     public void setActive(int newState) {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             switch (newState) {
             case AS_INACTIVE:
                 System.out.println(getDebugPartName() + ":setActive: INACTIVE");
@@ -754,8 +762,12 @@ public abstract class VSStackPresentation extends StackPresentation implements P
     }
 
     public void selectPart(IPresentablePart toSelect) {
-        if (PresentationPlugin.DEBUG) {
-            System.out.println(getDebugPartName() + ":selectPart "
+        if (PresentationPlugin.DEBUG_VIEWS && isView()) {
+            System.out.println(getDebugPartName() + ": selectView "
+                    + (toSelect != null ? toSelect.getName() : "null"));
+        }
+        if (PresentationPlugin.DEBUG_EDITORS && !isView()) {
+            System.out.println(getDebugPartName() + ": selectEditor "
                     + (toSelect != null ? toSelect.getName() : "null"));
         }
         if (currentPart != null && currentPart != toSelect) {
@@ -826,7 +838,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
     }
 
     protected void redraw() {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_PAINT) {
             System.out.println(getDebugPartName() + ":redraw all");
         }
         title.redraw();
@@ -836,7 +848,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
     }
 
     public void setVisible(boolean isVisible) {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             System.out.println(getDebugPartName() + ":setVisible: " + isVisible
                     + ", was: " + this.isVisible);
         }
@@ -890,15 +902,15 @@ public abstract class VSStackPresentation extends StackPresentation implements P
     }
 
     public void setBounds(Rectangle b) {
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println(getDebugPartName() + ":oldbounds " + oldBounds);
         }
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_LAYOUT) {
             System.out.println(getDebugPartName() + ":setbounds " + b);
         }
         // if closing, the area was not created
         if (tabArea == null) {
-            if (PresentationPlugin.DEBUG) {
+            if (PresentationPlugin.DEBUG_LAYOUT) {
                 System.out.println(getDebugPartName()
                         + " setBounds cancelled as tabArea is NULL");
             }
@@ -920,7 +932,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
 
                     layout();
                 } else {
-                    if (PresentationPlugin.DEBUG) {
+                    if (PresentationPlugin.DEBUG_LAYOUT) {
                         System.out.println(getDebugPartName()
                                 + " setBounds cancelled as unneeded");
                     }
@@ -946,9 +958,6 @@ public abstract class VSStackPresentation extends StackPresentation implements P
         return index;
     }
 
-    /* (non-Javadoc)
-     * @see net.sf.eclipseskins.vspresentation.VSStackPresentation#createPartTab(org.eclipse.ui.presentations.IPresentablePart, int)
-     */
     protected PartTab createPartTab(IPresentablePart newPart, int index) {
         PartTab partTab = new PartTab(tabArea, SWT.NO_BACKGROUND, newPart, isView());
         tabArea.addTab(index, partTab);
@@ -973,7 +982,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
             return;
         }
 
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             System.out.println(getDebugPartName() + " :addPart " + newPart.getName());
         }
         newPart.addPropertyListener(propListener);
@@ -987,11 +996,23 @@ public abstract class VSStackPresentation extends StackPresentation implements P
                 setMenuFocus(tab, false);
             }
         });
+
         tab.addMouseListener(new MouseAdapter() {
-            public void mouseUp(MouseEvent e) {
+        	/*
+			 * "maximize" action: fix for slow events on Linux: we can receive
+			 * key up events from the tab which was selected before!!!
+			 */
+            boolean downDetected;
+            public void mouseDown(MouseEvent e) {
                 if (e.button == 1 || e.button == 3) {
+                    downDetected = true;
+                }
+            }
+            public void mouseUp(MouseEvent e) {
+                if (downDetected && (e.button == 1 || e.button == 3)) {
                     changeSelection(newPart, tab);
                 }
+                downDetected = false;
             }
         });
         tab.addMouseListener(systemMenuListener);
@@ -1036,7 +1057,7 @@ public abstract class VSStackPresentation extends StackPresentation implements P
         //here when closing any editor through any means.
         rememberClosedPart(oldPart);
 
-        if (PresentationPlugin.DEBUG) {
+        if (PresentationPlugin.DEBUG_STATE) {
             System.out.println(getDebugPartName() + ":removePart " + oldPart.getName());
         }
         oldPart.removePropertyListener(propListener);
