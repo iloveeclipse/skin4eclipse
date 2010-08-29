@@ -1,8 +1,8 @@
-#Sat Jun 26 15:59:02 CEST 2010
+#Sun Aug 29 22:16:00 CEST 2010
 WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
 defaultDestination=
 defaultVariables=
 eclipse.preferences.version=1
 includeTeamPrivateFiles=false
-map|0=/|/home/andrei/Dokumente/homepage/eclipse|site.xml;plugins/**;features/**|,|,
+map|0=/|/home/andrei/Documents/homepage/eclipse|site.xml;plugins/**;features/**|,|,
 useCurrentDateForDestinationFiles=false
