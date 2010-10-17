@@ -31,7 +31,7 @@
       <category name="Eclipse 3.3-3.4"/>
    </feature>
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.3.1.jar" id="de.loskutov.BytecodeOutline.feature" version="2.3.1">
-      <category name="Eclipse 3.5-3.6"/>
+      <category name="Eclipse 3.6"/>
    </feature>
    <feature url="features/DataHierarchy_1.0.0.201005301956.jar" id="DataHierarchy" version="1.0.0.201005301956">
       <category name="Eclipse 3.5-3.6"/>
@@ -69,6 +69,11 @@
    <category-def name="Eclipse 3.5-3.6" label="Eclipse 3.5 - 3.6 plugins">
       <description>
          Eclipse 3.5 - 3.6 compatible plugins provided by Andrei Loskutov
+      </description>
+   </category-def>
+   <category-def name="Eclipse 3.6" label="Eclipse 3.6 plugins">
+      <description>
+         Eclipse 3.6 compatible plugins provided by Andrei Loskutov
       </description>
    </category-def>
    <category-def name="Beta" label="Beta">
