@@ -5,3 +5,5 @@ syntax: regexp
 ^EclipseSkins-test/bin$
 syntax: regexp
 \.jar$
+syntax: regexp
+^ALUpdateSite/\.artifactlock$
