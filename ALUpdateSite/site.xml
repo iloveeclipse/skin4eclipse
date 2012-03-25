@@ -39,7 +39,7 @@
    <feature url="features/DataHierarchy_1.0.0.201005301956.jar" id="DataHierarchy" version="1.0.0.201005301956">
       <category name="Eclipse 3.5-3.7"/>
    </feature>
-   <feature url="features/mercurialeclipse_1.9.0.201110042152.jar" id="mercurialeclipse" version="1.9.0.201110042152">
+   <feature url="features/mercurialeclipse_1.9.3.201203121841.jar" id="mercurialeclipse" version="1.9.3.201203121841">
       <category name="Eclipse 3.5-3.7"/>
    </feature>
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.1.jar" url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.1.jar"/>
@@ -54,7 +54,7 @@
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.201005301956.jar" url="http://datahierarchy.eclipselabs.org.codespot.com/files/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.0.201101292156.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.4.0.201101292156.jar"/>
-   <archive path="plugins/com.vectrace.MercurialEclipse_1.9.0.201110042152.jar" url="http://mercurialeclipse.eclipselabs.org.codespot.com/files/com.vectrace.MercurialEclipse_1.9.0.201110042152.jar"/>
+   <archive path="plugins/com.vectrace.MercurialEclipse_1.9.3.201203121841.jar" url="http://mercurialeclipse.eclipselabs.org.codespot.com/files/com.vectrace.MercurialEclipse_1.9.3.201203121841.jar"/>
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
       <description>
          Eclipse 3.3 - 3.4 compatible plugins provided by Andrey Loskutov
