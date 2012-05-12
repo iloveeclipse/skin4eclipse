@@ -7,25 +7,25 @@
       <category name="Eclipse 3.3-3.4"/>
    </feature>
    <feature url="features/JDepend4Eclipse_1.2.3.201108071203.jar" id="JDepend4Eclipse" version="1.2.3.201108071203">
-      <category name="Eclipse 3.5-3.7"/>
+      <category name="Eclipse 3.5-3.8"/>
    </feature>
    <feature url="features/FileSync_1.3.5.200910041235.jar" id="FileSync" version="1.3.5.200910041235">
       <category name="Eclipse 3.3-3.4"/>
    </feature>
    <feature url="features/FileSync_1.3.8.201104160944.jar" id="FileSync" version="1.3.8.201104160944">
-      <category name="Eclipse 3.5-3.7"/>
+      <category name="Eclipse 3.5-3.8"/>
    </feature>
    <feature url="features/AnyEditTools_2.3.0.200910041235.jar" id="AnyEditTools" version="2.3.0.200910041235">
       <category name="Eclipse 3.3-3.4"/>
    </feature>
    <feature url="features/AnyEditTools_2.4.1.201204040004.jar" id="AnyEditTools" version="2.4.1.201204040004">
-      <category name="Eclipse 3.5-3.7"/>
+      <category name="Eclipse 3.5-3.8"/>
    </feature>
    <feature url="features/EclipseSkins_1.4.3.jar" id="EclipseSkins" version="1.4.3">
       <category name="Eclipse 3.3-3.4"/>
    </feature>
    <feature url="features/EclipseSkins_1.5.6.201008292220.jar" id="EclipseSkins" version="1.5.6.201008292220">
-      <category name="Eclipse 3.5-3.7"/>
+      <category name="Eclipse 3.5-3.8"/>
    </feature>
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.2.12.jar" id="de.loskutov.BytecodeOutline.feature" version="2.2.12">
       <category name="Eclipse 3.3-3.4"/>
@@ -33,14 +33,14 @@
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.3.0.jar" id="de.loskutov.BytecodeOutline.feature" version="2.3.0">
       <category name="Eclipse 3.5"/>
    </feature>
-   <feature url="features/de.loskutov.BytecodeOutline.feature_2.4.0.jar" id="de.loskutov.BytecodeOutline.feature" version="2.4.0">
-      <category name="Eclipse 3.6-3.7"/>
+   <feature url="features/de.loskutov.BytecodeOutline.feature_2.4.1.jar" id="de.loskutov.BytecodeOutline.feature" version="2.4.1">
+      <category name="Eclipse 3.6-3.8"/>
    </feature>
    <feature url="features/DataHierarchy_1.0.0.201005301956.jar" id="DataHierarchy" version="1.0.0.201005301956">
-      <category name="Eclipse 3.5-3.7"/>
+      <category name="Eclipse 3.5-3.8"/>
    </feature>
    <feature url="features/mercurialeclipse_1.9.4.201203270141.jar" id="mercurialeclipse" version="1.9.4.201203270141">
-      <category name="Eclipse 3.5-3.7"/>
+      <category name="Eclipse 3.5-3.8"/>
    </feature>
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.1.jar" url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.1.jar"/>
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.3.201108071203.jar" url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.3.201108071203.jar"/>
@@ -48,7 +48,7 @@
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.6.201008292220.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipseskins.extvs_1.5.6.201008292220.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.2.12.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.2.12.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.3.0.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.3.0.jar"/>
-   <archive path="plugins/de.loskutov.BytecodeOutline_2.4.0.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.4.0.jar"/>
+   <archive path="plugins/de.loskutov.BytecodeOutline_2.4.1.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.4.1.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.5.200910041235.jar" url="http://filesync4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.FileSync_1.3.5.200910041235.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.8.201104160944.jar" url="http://filesync4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.FileSync_1.3.8.201104160944.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.201005301956.jar" url="http://datahierarchy.eclipselabs.org.codespot.com/files/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"/>
@@ -65,14 +65,14 @@
          Eclipse 3.5 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
-   <category-def name="Eclipse 3.5-3.7" label="Eclipse 3.5 - 3.7 plugins">
+   <category-def name="Eclipse 3.5-3.8" label="Eclipse 3.5 - 3.8 plugins">
       <description>
-         Eclipse 3.5 - 3.7 compatible plugins provided by Andrey Loskutov
+         Eclipse 3.5 - 3.8 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
-   <category-def name="Eclipse 3.6-3.7" label="Eclipse 3.6 - 3.7 plugins">
+   <category-def name="Eclipse 3.6-3.8" label="Eclipse 3.6 - 3.8 plugins">
       <description>
-         Eclipse 3.6 - 3.7 compatible plugins provided by Andrey Loskutov
+         Eclipse 3.6 - 3.8 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
    <category-def name="Beta" label="Beta">
