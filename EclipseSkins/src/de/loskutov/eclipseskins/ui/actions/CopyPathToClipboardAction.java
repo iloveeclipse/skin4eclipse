@@ -17,7 +17,6 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartReference;
-import org.eclipse.ui.internal.presentations.PresentablePart;
 
 import de.loskutov.eclipseskins.sessions.EditorInfo;
 
@@ -29,11 +28,12 @@ public class CopyPathToClipboardAction extends CopyTitleToClipboardAction {
     }
 
     public void run() {
-        if (!(part instanceof PresentablePart)) {
-            return;
-        }
-        PresentablePart ppart = (PresentablePart) part;
-        IWorkbenchPartReference partRef = ppart.getPane().getPartReference();
+//        if (!(part instanceof PresentablePart)) {
+//            return;
+//        }
+//        PresentablePart ppart = (PresentablePart) part;
+        // XXX 4.2: how to get part reference?
+        IWorkbenchPartReference partRef = null;//ppart.getPane().getPartReference();
         IWorkbenchPart workbenchPart = partRef.getPart(true);
         if(!(workbenchPart instanceof IEditorPart)) {
             super.run();

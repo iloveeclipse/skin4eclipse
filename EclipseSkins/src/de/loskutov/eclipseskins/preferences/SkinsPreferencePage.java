@@ -30,10 +30,8 @@ import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.internal.WorkbenchPage;
 import org.eclipse.ui.themes.ITheme;
 
 import de.loskutov.eclipseskins.PresentationPlugin;
@@ -440,18 +438,10 @@ SelectionListener {
         IPreferenceStore apiPrefStore = PreferenceInitializer.getApiPrefStore();
         if (apiPrefStore.getBoolean(ThemeConstants.ENABLE_NEW_MIN_MAX) != minimizeToCoolbar
                 .getSelection()) {
-            IWorkbenchPage page = PlatformUI.getWorkbench()
+            PlatformUI.getWorkbench()
             .getActiveWorkbenchWindow().getActivePage();
 
-            boolean minEnabled = apiPrefStore.getBoolean(ThemeConstants.ENABLE_NEW_MIN_MAX);
-            if(minEnabled) {
-                ((WorkbenchPage) page).getActivePerspective().getFastViewManager().restoreAllTrimStacks();
-            } else {
-                // curiosly, this doesn't work as expected for non-active perspectives
-                //((WorkbenchPage) page).unzoomAllPerspectives();
-                // so it's enough to call this on the visible perspective
-                ((WorkbenchPage) page).getActivePerspective().getPresentation().forceNoZoom();
-            }
+            apiPrefStore.getBoolean(ThemeConstants.ENABLE_NEW_MIN_MAX);
         }
         apiPrefStore.setValue(
                 ThemeConstants.ENABLE_NEW_MIN_MAX,

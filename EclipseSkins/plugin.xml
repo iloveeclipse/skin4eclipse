@@ -15,18 +15,6 @@
     <initializer class="de.loskutov.eclipseskins.preferences.PreferenceInitializer"/>
   </extension>
    <extension
-         point="org.eclipse.ui.presentationFactories">
-      <factory
-            class="de.loskutov.eclipseskins.presentation.VSImprovedPresentationFactory"
-            id="de.loskutov.EclipseSkins.extvs.EVSPresentationFactory"
-            name="Extended VS Presentation"/>
-      <factory
-            class="org.eclipse.ui.internal.presentations.defaultpresentation.NativePresentationFactory"
-            id="org.eclipse.ui.internal.presentations.defaultpresentation.NativePresentationFactory"
-            name="Native UI (obsoleted and experimental)">
-      </factory>
-   </extension>
-   <extension
          point="org.eclipse.ui.themes">
       <themeElementCategory
             id="de.loskutov.EclipseSkins.themeElementCategory"
@@ -35,9 +23,6 @@
             The light look and feel with thin borders around active views and icons on both editor and views tabs
          </description>
       </themeElementCategory>
-      <categoryPresentationBinding
-            categoryId="de.loskutov.EclipseSkins.themeElementCategory"
-            presentationId="de.loskutov.EclipseSkins.extvs.EVSPresentationFactory"/>
       <colorDefinition
             categoryId="de.loskutov.EclipseSkins.themeElementCategory"
             id="de.loskutov.EclipseSkins.border.color.active"
