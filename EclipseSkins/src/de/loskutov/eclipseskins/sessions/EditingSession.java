@@ -29,7 +29,6 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.XMLMemento;
 
 import de.loskutov.eclipseskins.PresentationPlugin;
-import de.loskutov.eclipseskins.presentation.VSImprovedPresentationFactory;
 
 /**
  * @author Andrei
@@ -169,13 +168,14 @@ public class EditingSession {
     }
 
     public void createEditorsSnapshot() {
-        if(VSImprovedPresentationFactory.isPresentationActive()){
+        // XXX 4.2 probably can be removed
+        /*if(VSImprovedPresentationFactory.isPresentationActive()){
             List editorsShapshot = VSImprovedPresentationFactory.createEditorsShapshot();
             for (Iterator iterator = editorsShapshot.iterator(); iterator.hasNext();) {
                 EditorInfo info = (EditorInfo) iterator.next();
                 add(info);
             }
-        } else {
+        } else*/ {
             IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
             IEditorReference[] editorReferences = page.getEditorReferences();
             for (int i = 0; i < editorReferences.length; i++) {

@@ -26,7 +26,11 @@ import org.eclipse.swt.widgets.Widget;
  */
 public final class NamePatternFilter extends ViewerFilter {
 
-	private String pattern;
+	/**
+     *
+     */
+    private static final String DIRTY_PREFIX = "*";
+    private String pattern;
 
     public NamePatternFilter() {
         super();
@@ -58,7 +62,7 @@ public final class NamePatternFilter extends ViewerFilter {
         }
         // A dirty editor's label will start with dirty prefix, this prefix
         // should not be taken in consideration when matching with a pattern
-        String prefix = PartTab.DIRTY_PREFIX;
+        String prefix = DIRTY_PREFIX; // PartTab.DIRTY_PREFIX;
         if (matchName.startsWith(prefix)) {
             matchName = matchName.substring(prefix.length());
         }
@@ -90,7 +94,7 @@ public final class NamePatternFilter extends ViewerFilter {
                     return null;
                 }
                 // remove the dirty prefix from the editor's label
-                String prefix = PartTab.DIRTY_PREFIX;
+                String prefix = DIRTY_PREFIX; // PartTab.DIRTY_PREFIX;
                 if (label.startsWith(prefix)) {
                     label = label.substring(prefix.length());
                 }

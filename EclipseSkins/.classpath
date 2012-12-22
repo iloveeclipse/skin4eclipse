@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="de/loskutov/eclipseskins/presentation/|de/loskutov/eclipseskins/ui/PartTab.java|de/loskutov/eclipseskins/ui/PartTitle.java|de/loskutov/eclipseskins/ui/TabArea.java|de/loskutov/eclipseskins/ui/TabAreaButtons.java|de/loskutov/eclipseskins/ui/menu/|de/loskutov/eclipseskins/ui/buttons/NavigatorButton.java|de/loskutov/eclipseskins/ui/buttons/PartListButton.java|de/loskutov/eclipseskins/ui/buttons/ShowTabListButton.java|de/loskutov/eclipseskins/ui/actions/ShowClosedPartListAction.java|de/loskutov/eclipseskins/ui/PartListControl.java|de/loskutov/eclipseskins/ui/PartListMenu.java|de/loskutov/eclipseskins/ui/ClosedPartListControl.java|de/loskutov/eclipseskins/ui/AbstractPartListControl.java|de/loskutov/eclipseskins/ui/BorderFillLayout.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.4"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="bin"/>

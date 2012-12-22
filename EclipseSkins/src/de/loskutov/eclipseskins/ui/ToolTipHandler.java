@@ -14,7 +14,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseTrackAdapter;
-import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
@@ -25,9 +24,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.Widget;
-import org.eclipse.ui.presentations.IPresentablePart;
-
-import de.loskutov.eclipseskins.presentation.VSStackPresentation.ClosedPart;
 
 /**
  * Emulated tooltip handler
@@ -120,32 +116,7 @@ public class ToolTipHandler {
 
                 tipWidget = widget;
                 tipPosition = control.toDisplay(pt);
-                Object data = widget.getData();
-                if (data instanceof IPresentablePart) {
-                    IPresentablePart part = (IPresentablePart) data;
-                    String text = part.getTitleToolTip();
-                    if(text == null || text.length() == 0){
-                        text = part.getTitle();
-                    }
-                    Image image = part.getTitleImage();
-                    tipLabelText.setText(text != null ? text : "");
-                    tipLabelImage.setImage(image); // accepts null
-                    tipShell.pack();
-                    setHoverLocation(tipShell, tipPosition);
-                    tipShell.setVisible(true);
-                } else if(data instanceof ClosedPart){
-                    ClosedPart part = (ClosedPart) data;
-                    String text = part.tooltip;
-                    if(text == null || text.length() == 0){
-                        text = part.name;
-                    }
-                    Image image = part.image;
-                    tipLabelText.setText(text != null ? text : "");
-                    tipLabelImage.setImage(image); // accepts null
-                    tipShell.pack();
-                    setHoverLocation(tipShell, tipPosition);
-                    tipShell.setVisible(true);
-                }
+                widget.getData();
             }
         });
 
