@@ -39,8 +39,11 @@
    <feature url="features/DataHierarchy_1.0.0.201005301956.jar" id="DataHierarchy" version="1.0.0.201005301956">
       <category name="Eclipse 3.5-4.2"/>
    </feature>
-   <feature url="features/mercurialeclipse_2.0.1.201210281055.jar" id="mercurialeclipse" version="2.0.1.201210281055">
+   <feature url="features/mercurialeclipse_2.0.1.201211031332.jar" id="mercurialeclipse" version="2.0.1.201211031332">
       <category name="Eclipse 3.5-4.2"/>
+   </feature>
+   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_2.0.2.20121210.jar" id="edu.umd.cs.findbugs.plugin.eclipse" version="2.0.2.20121210">
+      <category name="Eclipse 3.6-4.2"/>
    </feature>
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.1.jar" url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.1.jar"/>
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.3.201108071203.jar" url="http://jdepend4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipse.jdepend_1.2.3.201108071203.jar"/>
@@ -54,7 +57,8 @@
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.201005301956.jar" url="http://datahierarchy.eclipselabs.org.codespot.com/files/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.3.201211022220.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.4.3.201211022220.jar"/>
-   <archive path="plugins/com.vectrace.MercurialEclipse_2.0.1.201210281055.jar" url="http://mercurialeclipse.eclipselabs.org.codespot.com/files/com.vectrace.MercurialEclipse_2.0.1.201210281055.jar"/>
+   <archive path="plugins/com.vectrace.MercurialEclipse_2.0.1.201211031332.jar" url="http://mercurialeclipse.eclipselabs.org.codespot.com/files/com.vectrace.MercurialEclipse_2.0.1.201211031332.jar"/>
+   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.2.20121210.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.2.20121210.jar"/>
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
       <description>
          Eclipse 3.3 - 3.4 compatible plugins provided by Andrey Loskutov
