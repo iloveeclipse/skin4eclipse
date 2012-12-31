@@ -1,9 +1,4 @@
-
-syntax: regexp
-^EclipseSkins/bin$
-syntax: regexp
-^EclipseSkins-test/bin$
-syntax: regexp
-\.jar$
-syntax: regexp
-^ALUpdateSite/\.artifactlock$
+EclipseSkins/bin
+EclipseSkins-test/bin
+*.jar
+ALUpdateSite/.artifactlock
