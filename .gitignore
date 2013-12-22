@@ -2,3 +2,6 @@ EclipseSkins/bin
 EclipseSkins-test/bin
 *.jar
 ALUpdateSite/.artifactlock
+ALUpdateSite/features
+ALUpdateSite/plugins
+.directory

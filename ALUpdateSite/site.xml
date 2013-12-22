@@ -18,7 +18,7 @@
    <feature url="features/AnyEditTools_2.3.0.200910041235.jar" id="AnyEditTools" version="2.3.0.200910041235">
       <category name="Eclipse 3.3-3.4"/>
    </feature>
-   <feature url="features/AnyEditTools_2.4.4.201307082032.jar" id="AnyEditTools" version="2.4.4.201307082032">
+   <feature url="features/AnyEditTools_2.4.5.201312221551.jar" id="AnyEditTools" version="2.4.5.201312221551">
       <category name="Eclipse 3.5-4.3"/>
    </feature>
    <feature url="features/EclipseSkins_1.4.3.jar" id="EclipseSkins" version="1.4.3">
@@ -33,7 +33,7 @@
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.3.0.jar" id="de.loskutov.BytecodeOutline.feature" version="2.3.0">
       <category name="Eclipse 3.5"/>
    </feature>
-   <feature url="features/de.loskutov.BytecodeOutline.feature_2.4.1.jar" id="de.loskutov.BytecodeOutline.feature" version="2.4.1">
+   <feature url="features/de.loskutov.BytecodeOutline.feature_2.4.2.jar" id="de.loskutov.BytecodeOutline.feature" version="2.4.2">
       <category name="Eclipse 3.6-4.3"/>
    </feature>
    <feature url="features/DataHierarchy_1.0.0.201005301956.jar" id="DataHierarchy" version="1.0.0.201005301956">
@@ -48,12 +48,12 @@
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.6.201008292220.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.eclipseskins.extvs_1.5.6.201008292220.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.2.12.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.2.12.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.3.0.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.3.0.jar"/>
-   <archive path="plugins/de.loskutov.BytecodeOutline_2.4.1.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.4.1.jar"/>
+   <archive path="plugins/de.loskutov.BytecodeOutline_2.4.2.jar" url="http://skin4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.BytecodeOutline_2.4.2.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.5.200910041235.jar" url="http://filesync4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.FileSync_1.3.5.200910041235.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.8.201104160944.jar" url="http://filesync4eclipse.eclipselabs.org.codespot.com/files/de.loskutov.FileSync_1.3.8.201104160944.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.201005301956.jar" url="http://datahierarchy.eclipselabs.org.codespot.com/files/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar"/>
-   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.4.201307082032.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.4.4.201307082032.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.5.201312221551.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.4.5.201312221551.jar"/>
    <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.3.20131122-15027.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.3.20131122-15027.jar"/>
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
       <description>
@@ -77,7 +77,7 @@
    </category-def>
    <category-def name="Eclipse 3.6-4.3" label="Eclipse 3.6 - 4.3 plugins">
       <description>
-         Eclipse 3.6 - 4.2 compatible plugins provided by Andrey Loskutov
+         Eclipse 3.6 - 4.3 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
    <category-def name="Beta" label="Beta">
