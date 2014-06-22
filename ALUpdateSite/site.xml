@@ -21,7 +21,7 @@
    <feature url="features/AnyEditTools_2.4.5.201312221551.jar" id="AnyEditTools" version="2.4.5.201312221551">
       <category name="Eclipse 3.5"/>
    </feature>
-   <feature url="features/AnyEditTools_2.4.7.201406221122.jar" id="AnyEditTools" version="2.4.7.201406221122">
+   <feature url="features/AnyEditTools_2.4.7.201406221324.jar" id="AnyEditTools" version="2.4.7.201406221324">
       <category name="Eclipse 3.6-4.4"/>
    </feature>
    <feature url="features/EclipseSkins_1.4.3.jar" id="EclipseSkins" version="1.4.3">
@@ -60,7 +60,7 @@
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.0.201005301956.jar" url="http://datahierarchy.eclipselabs.org.codespot.com/files/de.loskutov.DataHierarchy_1.0.0.201005301956.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar" url="http://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.3.0.200910041235.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.5.201312221551.jar" url="https://anyedittools.eclipselabs.org.codespot.com/files/de.loskutov.anyedit.AnyEditTools_2.4.5.201312221551.jar"/>
-   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.7.201406221122.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.7.201406221122.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.7.201406221324.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.7.201406221324.jar"/>
    <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.3.20131122-15027.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_2.0.3.20131122-15027.jar"/>
    <archive path="plugins/ZipEditor_1.1.1.201303181845.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.1.201303181845.jar"/>
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
