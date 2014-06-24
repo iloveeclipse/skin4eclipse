@@ -2,7 +2,7 @@
 <feature
       id="EclipseSkins"
       label="Extended VS Presentation"
-      version="1.5.6.qualifier"
+      version="1.5.7.qualifier"
       provider-name="Andrey Loskutov"
       plugin="de.loskutov.eclipseskins.extvs">
 
@@ -11,11 +11,11 @@
    </description>
 
    <copyright url="http://andrei.gmxhome.de/skins/index.html">
-      Copyright (c) 2002 - 2013 by Andrey Loskutov &lt;Loskutov@gmx.de&gt;. All rights reserved.
+      Copyright (c) 2002 - 2014 by Andrey Loskutov &lt;Loskutov@gmx.de&gt;. All rights reserved.
    </copyright>
 
    <license url="http://www.eclipse.org/legal/epl-v10.html">
-      Copyright (c) 2002 - 2013 Andrey Loskutov, licensed under the Eclipse Public License 1.0.
+      Copyright (c) 2002 - 2014 Andrey Loskutov, licensed under the Eclipse Public License 1.0.
    </license>
 
    <url>
@@ -25,7 +25,7 @@
 
    <requires>
       <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.core.runtime" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.6.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jface.text"/>
       <import plugin="org.eclipse.ui.views"/>
       <import plugin="org.eclipse.core.resources"/>
