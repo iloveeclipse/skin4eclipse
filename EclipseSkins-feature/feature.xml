@@ -4,8 +4,7 @@
       label="Extended VS Presentation"
       version="1.5.6.qualifier"
       provider-name="Andrey Loskutov"
-      plugin="de.loskutov.eclipseskins.extvs"
-      image="loskutov32.gif">
+      plugin="de.loskutov.eclipseskins.extvs">
 
    <description url="http://andrei.gmxhome.de/skins/index.html">
       Extended VS Presentation plugin contributes powerful editing sessions management and a highly customisable and very useful skin (&quot;look and feel&quot;) for Eclipse
