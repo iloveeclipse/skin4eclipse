@@ -34,7 +34,7 @@
    <feature url="features/FileSync_1.3.9.201406241900.jar" id="FileSync" version="1.3.9.201406241900">
       <category name="Eclipse 3.6-4.4"/>
    </feature>
-   <feature url="features/AnyEditTools_2.4.8.201406251302.jar" id="AnyEditTools" version="2.4.8.201406251302">
+   <feature url="features/AnyEditTools_2.4.9.qualifier.jar" id="AnyEditTools" version="2.4.9.qualifier">
       <category name="Eclipse 3.6-4.4"/>
    </feature>
    <feature url="features/EclipseSkins_1.5.7.201406241900.jar" id="EclipseSkins" version="1.5.7.201406241900">
@@ -48,7 +48,7 @@
    </feature>
 
    <!-- foreign -->
-   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140629-84d758f.jar" id="edu.umd.cs.findbugs.plugin.eclipse" version="3.0.0.20140629-84d758f">
+   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar" id="edu.umd.cs.findbugs.plugin.eclipse" version="3.0.0.20140706-2cfb468">
       <category name="Eclipse 3.6-4.4"/>
    </feature>
    <feature url="features/zipeditor_1.1.1.201303181845.jar" id="zipeditor" version="1.1.1.201303181845">
@@ -70,10 +70,10 @@
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar"   url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"             url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.1.201406241900.jar"        url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.DataHierarchy_1.0.1.201406241900.jar"/>
-   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.8.201406251302.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.8.201406251302.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.9.qualifier.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.9.qualifier.jar"/>
 
    <!-- foreign -->
-   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140629-84d758f.jar" url="http://findbugs.cs.umd.edu/eclipse-candidate/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140629-84d758f.jar"/>
+   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar" url="http://findbugs.cs.umd.edu/eclipse-candidate/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar"/>
    <archive path="plugins/ZipEditor_1.1.1.201303181845.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.1.201303181845.jar"/>
 
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
