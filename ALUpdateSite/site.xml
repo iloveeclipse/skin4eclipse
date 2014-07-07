@@ -73,7 +73,7 @@
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.9.201407072040.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.9.201407072040.jar"/>
 
    <!-- foreign -->
-   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar" url="http://findbugs.cs.umd.edu/eclipse-candidate/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar"/>
+   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar"/>
    <archive path="plugins/ZipEditor_1.1.1.201303181845.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.1.201303181845.jar"/>
 
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
