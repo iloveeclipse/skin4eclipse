@@ -34,7 +34,7 @@
    <feature url="features/FileSync_1.3.9.201406241900.jar" id="FileSync" version="1.3.9.201406241900">
       <category name="Eclipse 3.6-4.5"/>
    </feature>
-   <feature url="features/AnyEditTools_2.4.14.201504052029.jar" id="AnyEditTools" version="2.4.14.201504052029">
+   <feature url="features/AnyEditTools_2.4.15.201504172030.jar" id="AnyEditTools" version="2.4.15.201504172030">
       <category name="Eclipse 3.6-4.5"/>
    </feature>
    <feature url="features/EclipseSkins_1.5.7.201406241900.jar" id="EclipseSkins" version="1.5.7.201406241900">
@@ -70,7 +70,7 @@
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.9.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.1.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.DataHierarchy_1.0.1.201406241900.jar"/>
-   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.14.201504052029.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.14.201504052029.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.15.201504172030.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.15.201504172030.jar"/>
 
    <!-- foreign -->
    <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar"/>
