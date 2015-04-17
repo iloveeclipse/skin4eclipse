@@ -48,7 +48,7 @@
    </feature>
 
    <!-- foreign -->
-   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar" id="edu.umd.cs.findbugs.plugin.eclipse" version="3.0.0.20140706-2cfb468">
+   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar" id="edu.umd.cs.findbugs.plugin.eclipse" version="3.0.1.20150306-5afe4d1">
       <category name="Eclipse 3.6-4.5"/>
    </feature>
    <feature url="features/zipeditor_1.1.1.201303181845.jar" id="zipeditor" version="1.1.1.201303181845">
@@ -73,7 +73,7 @@
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.14.201504052029.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.14.201504052029.jar"/>
 
    <!-- foreign -->
-   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar"/>
+   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar"/>
    <archive path="plugins/ZipEditor_1.1.1.201303181845.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.1.201303181845.jar"/>
    <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
       <description>
