@@ -40,7 +40,7 @@
    <feature url="features/EclipseSkins_1.5.7.201406241900.jar" id="EclipseSkins" version="1.5.7.201406241900">
       <category name="Eclipse 3.6-3.8"/>
    </feature>
-   <feature url="features/DataHierarchy_1.0.2.201505011933.jar" id="DataHierarchy" version="1.0.2.201505011933">
+   <feature url="features/DataHierarchy_1.0.2.201505012108.jar" id="DataHierarchy" version="1.0.2.201505012108">
       <category name="Eclipse 3.6-4.5"/>
    </feature>
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.4.3.jar" id="de.loskutov.BytecodeOutline.feature" version="2.4.3">
@@ -69,7 +69,7 @@
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.4.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipse.jdepend_1.2.4.201406241900.jar"/>
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.9.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"/>
-   <archive path="plugins/de.loskutov.DataHierarchy_1.0.2.201505011933.jar" url="https://github.com/iloveeclipse/datahierarchy/releases/download/1.0.2/de.loskutov.DataHierarchy_1.0.2.201505011933.jar"/>
+   <archive path="plugins/de.loskutov.DataHierarchy_1.0.2.201505012108.jar" url="https://github.com/iloveeclipse/datahierarchy/releases/download/1.0.2/de.loskutov.DataHierarchy_1.0.2.201505012108.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.4.15.201504172030.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.anyedit.AnyEditTools_2.4.15.201504172030.jar"/>
 
    <!-- foreign -->
