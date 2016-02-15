@@ -40,10 +40,10 @@
    <feature url="features/AnyEditTools_2.5.0.201510241327.jar" id="AnyEditTools" version="2.5.0.201510241327">
       <category name="Eclipse 3.7-4.5"/>
    </feature>
-   <feature url="features/AnyEditTools_2.6.0.201511291145.jar" id="AnyEditTools" version="2.6.0.201511291145">
+   <feature url="features/AnyEditTools_2.6.1.201602151951.jar" id="AnyEditTools" version="2.6.1.201602151951">
       <category name="Eclipse 3.8-4.6"/>
    </feature>
-   <feature url="features/org.eclipselabs.plugindependencies_1.0.0.201511291053.jar" id="org.eclipselabs.plugindependencies" version="1.0.0.201511291053">
+   <feature url="features/org.eclipselabs.plugindependencies_1.0.5.201602151951.jar" id="org.eclipselabs.plugindependencies" version="1.0.5.201602151951">
       <category name="Eclipse 3.8-4.6"/>
    </feature>
    <feature url="features/EclipseSkins_1.5.7.201406241900.jar" id="EclipseSkins" version="1.5.7.201406241900">
@@ -76,14 +76,14 @@
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.5.0.201510241327.jar" url="https://github.com/iloveeclipse/anyedittools/releases/download/2.5.0/de.loskutov.anyedit.AnyEditTools_2.5.0.201510241327.jar"/>
 
    <!-- maintained -->
-   <archive path="plugins/org.eclipselabs.plugindependencies.core_1.0.4.jar" url="https://github.com/iloveeclipse/plugindependencies/releases/download/1.0.4/org.eclipselabs.plugindependencies.core_1.0.4.jar"/>
-   <archive path="plugins/org.eclipselabs.plugindependencies.ui_1.0.4.jar" url="https://github.com/iloveeclipse/plugindependencies/releases/download/1.0.4/org.eclipselabs.plugindependencies.ui_1.0.4.jar"/>
+   <archive path="plugins/org.eclipselabs.plugindependencies.core_1.0.5.201602151951.jar" url="https://github.com/iloveeclipse/plugindependencies/releases/download/1.0.5/org.eclipselabs.plugindependencies.core_1.0.5.201602151951.jar"/>
+   <archive path="plugins/org.eclipselabs.plugindependencies.ui_1.0.5.201602151951.jar" url="https://github.com/iloveeclipse/plugindependencies/releases/download/1.0.5/org.eclipselabs.plugindependencies.ui_1.0.5.201602151951.jar"/>
    <archive path="plugins/de.loskutov.BytecodeOutline_2.4.3.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.BytecodeOutline_2.4.3.jar"/>
    <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.4.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipse.jdepend_1.2.4.201406241900.jar"/>
    <archive path="plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipseskins.extvs_1.5.7.201406241900.jar"/>
    <archive path="plugins/de.loskutov.FileSync_1.3.9.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.2.201505012108.jar" url="https://github.com/iloveeclipse/datahierarchy/releases/download/1.0.2/de.loskutov.DataHierarchy_1.0.2.201505012108.jar"/>
-   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.6.0.201511291145.jar" url="https://github.com/iloveeclipse/anyedittools/releases/download/2.6.0/de.loskutov.anyedit.AnyEditTools_2.6.0.201511291145.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.6.1.201602151951.jar" url="https://github.com/iloveeclipse/anyedittools/releases/download/2.6.1/de.loskutov.anyedit.AnyEditTools_2.6.1.201602151951.jar"/>
 
    <!-- foreign -->
    <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar" url="http://findbugs.cs.umd.edu/eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.1.20150306-5afe4d1.jar"/>
