@@ -6,36 +6,36 @@
 
    <!-- maintained -->
    <feature url="features/JDepend4Eclipse_1.2.4.201406241900.jar" id="JDepend4Eclipse" version="1.2.4.201406241900">
-      <category name="Eclipse 3.6-4.7"/>
+      <category name="Eclipse 3.6-4.8"/>
    </feature>
    <feature url="features/FileSync_1.3.9.201406241900.jar" id="FileSync" version="1.3.9.201406241900">
-      <category name="Eclipse 3.6-4.7"/>
+      <category name="Eclipse 3.6-4.8"/>
    </feature>
    <feature url="features/AnyEditTools_2.7.1.201709201439.jar" id="AnyEditTools" version="2.7.1.201709201439">
-      <category name="Eclipse 3.8-4.7"/>
+      <category name="Eclipse 3.8-4.8"/>
    </feature>
    <feature url="features/org.eclipselabs.plugindependencies_1.1.0.201705012328.jar" id="org.eclipselabs.plugindependencies" version="1.1.0.201705012328">
-      <category name="Eclipse 4.4-4.7"/>
+      <category name="Eclipse 4.4-4.8"/>
    </feature>
    <feature url="features/EclipseSkins_1.5.7.201406241900.jar" id="EclipseSkins" version="1.5.7.201406241900">
       <category name="Eclipse 3.6-3.8"/>
    </feature>
    <feature url="features/DataHierarchy_1.0.3.201702120923.jar" id="DataHierarchy" version="1.0.3.201702120923">
-      <category name="Eclipse 3.6-4.7"/>
+      <category name="Eclipse 3.6-4.8"/>
    </feature>
    <feature url="features/de.loskutov.BytecodeOutline.feature_2.4.3.jar" id="de.loskutov.BytecodeOutline.feature" version="2.4.3">
-      <category name="Eclipse 3.6-4.7"/>
+      <category name="Eclipse 3.6-4.8"/>
    </feature>
 
    <!-- foreign -->
-   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.0.2.20160306-90c514b.jar" id="edu.umd.cs.findbugs.plugin.eclipse" version="3.0.2.20160306-90c514b">
-      <category name="Eclipse 3.8-4.7"/>
+   <feature url="features/com.github.spotbugs.plugin.eclipse_3.1.0.r201710241414-11c9895.jar" id="com.github.spotbugs.plugin.eclipse" version="3.1.0.r201710241414-11c9895">
+      <category name="Eclipse 3.8-4.8"/>
    </feature>
    <feature url="features/zipeditor_1.1.3.201703012047.jar" id="zipeditor" version="1.1.3.201703012047">
-      <category name="Eclipse 3.6-4.7"/>
+      <category name="Eclipse 3.6-4.8"/>
    </feature>
    <feature url="features/com.cr.lockness.Lockness.feature_3.1.1.jar" id="com.cr.lockness.Lockness.feature" version="3.1.1">
-      <category name="Eclipse 3.6-4.7"/>
+      <category name="Eclipse 3.6-4.8"/>
    </feature>
 
    <!-- maintained -->
@@ -47,26 +47,26 @@
    <archive path="plugins/de.loskutov.FileSync_1.3.9.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"/>
    <archive path="plugins/de.loskutov.DataHierarchy_1.0.3.201702120923.jar" url="https://github.com/iloveeclipse/datahierarchy/releases/download/1.0.3/de.loskutov.DataHierarchy_1.0.3.201702120923.jar"/>
    <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.7.1.201709201439.jar" url="https://github.com/iloveeclipse/anyedittools/releases/download/2.7.1/de.loskutov.anyedit.AnyEditTools_2.7.1.201709201439.jar"/>
-   <archive path="plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.2.20160306-90c514b.jar" url="https://github.com/findbugsproject/findbugs/releases/download/3.0.2_preview2/edu.umd.cs.findbugs.plugin.eclipse_3.0.2.20160306-90c514b.jar"/>
+   <archive path="plugins/com.github.spotbugs.plugin.eclipse_3.1.0.r201710241414-11c9895.jar" url="https://spotbugs.github.io/eclipse/plugins/com.github.spotbugs.plugin.eclipse_3.1.0.r201710241414-11c9895.jar"/>
    <archive path="plugins/ZipEditor_1.1.3.201703012047.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.3.201703012047.jar"/>
    <category-def name="Eclipse 3.6-3.8" label="Eclipse 3.6 - 3.8 plugins">
       <description>
          Eclipse 3.6 - 3.8 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
-   <category-def name="Eclipse 3.6-4.7" label="Eclipse 3.6 - 4.7 plugins">
+   <category-def name="Eclipse 3.6-4.8" label="Eclipse 3.6 - 4.7 plugins">
       <description>
          Eclipse 3.6 - 4.6 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
-   <category-def name="Eclipse 3.8-4.7" label="Eclipse 3.8 - 4.7 plugins">
+   <category-def name="Eclipse 3.8-4.8" label="Eclipse 3.8 - 4.7 plugins">
       <description>
          Eclipse 3.7 - 4.6 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
-   <category-def name="Eclipse 4.4-4.7" label="Eclipse 4.4-4.7 plugins">
+   <category-def name="Eclipse 4.4-4.8" label="Eclipse 4.4-4.8 plugins">
       <description>
-         Eclipse 4.4-4.7 compatible plugins provided by Andrey Loskutov
+         Eclipse 4.4-4.8 compatible plugins provided by Andrey Loskutov
       </description>
    </category-def>
    <category-def name="Beta" label="Beta">
